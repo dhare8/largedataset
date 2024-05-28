@@ -1,0 +1,3142 @@
+[
+    {
+        "Input": "Write a python code to drop row with null values in a dataframe.",
+        "Output": "df.dropna(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to drop column gender in a dataframe.",
+        "Output": "df.drop(['gender'], axis=1, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to display first 10 rows in a dataframe.",
+        "Output": "df.head(10)"
+    },
+    {
+        "Input": "Write a python code to display last 10 rows in a dataframe.",
+        "Output": "df.tail(10)"
+    },
+    {
+        "Input": "Write a python code to display datatype in a dataframe.",
+        "Output": "df.dtypes"
+    },
+    {
+        "Input": "Write a python code to return numpy representation of the underlying data without the index or column labels.",
+        "Output": "df.to_numpy()"
+    },
+    {
+        "Input": "Write a python code to show a quick statistic summary of data",
+        "Output": "df.describe()"
+    },
+    {
+        "Input": "Write a python code to sort data by an axis",
+        "Output": "df.sort_index(axis=1,ascending=false)"
+    },
+    {
+        "Input": "Write a python code to fill missing values with 0",
+        "Output": "df.fillna(0,inplace=True)"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2.",
+        "Output": "df1.merge(df2,left_on='column1',right_on='column2')"
+    },
+    {
+        "Input": "Write a python code to concatenate two dataframes df1 and df2 along rows.",
+        "Output": "pd.concat([df1,df2],axis=0)"
+    },
+    {
+        "Input": "Write a python code to concatenate two dataframes df1 and df2 along columns.",
+        "Output": "pd.concat([df1,df2],axis=1)"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks",
+        "Output": "df[df['marks']>10]"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks using query",
+        "Output": "df.query('marks'>10)"
+    },
+    {
+        "Input": "Write a python code to rename a column name to first_name.",
+        "Output": "df.rename(columns={'name':'first_name'},inplace=True)"
+    },
+    {
+        "Input": "Write a python code for deleting duplicate data.",
+        "Output": "df.drop_duplicates(inplace=True)"
+    },
+    {
+        "Input": "Write a python code for grouping and aggregating the data.",
+        "Output": "df.groupby('column_name').sum()"
+    },
+    {
+        "Input": "Write a python code to change datatype of column mean to float.",
+        "Output": "df['mean']=df['mean'].astype('float')"
+    },
+    {
+        "Input": "Write a python code to find mean of column marks.",
+        "Output": "df['marks'].mean()"
+    },
+    {
+        "Input": "Write a python code to find median of column marks.",
+        "Output": "df['marks'].median()"
+    },
+    {
+        "Input": "Write a python code to find mode of column marks.",
+        "Output": "df['marks'].mode()"
+    },
+    {
+        "Input": "Write a python code to find standard deviation of column marks.",
+        "Output": "df['marks'].std()"
+    },
+    {
+        "Input": "Write a python code to find variance of column marks.",
+        "Output": "df['marks'].var()"
+    },
+    {
+        "Input": "Write a python code to find correlation of column marks with result.",
+        "Output": "df['marks'].corr(df['result'])"
+    },
+    {
+        "Input": "Write a python code to find covariance of column marks with result.",
+        "Output": "df['marks'].cov(df['result'])"
+    },
+    {
+        "Input": "Write a python code to reset the index of a dataframe.",
+        "Output": "df.reset_index(drop=True, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to set the column 'id' as the index.",
+        "Output": "df.set_index('id', inplace=True)"
+    },
+    {
+        "Input": "Write a python code to create a new column 'status' based on the condition that marks greater than 50 is 'Pass' else 'Fail'.",
+        "Output": "df['status'] = df['marks'].apply(lambda x: 'Pass' if x > 50 else 'Fail')"
+    },
+    {
+        "Input": "Write a python code to calculate the maximum value of the 'height' column.",
+        "Output": "df['height'].max()"
+    },
+    {
+        "Input": "Write a python code to calculate the minimum value of the 'height' column.",
+        "Output": "df['height'].min()"
+    },
+    {
+        "Input": "Write a python code to pivot a dataframe with 'index_column' as the index, 'columns_column' as the columns, and 'values_column' as the values.",
+        "Output": "df.pivot(index='index_column', columns='columns_column', values='values_column')"
+    },
+    {
+        "Input": "Write a python code to melt a dataframe with 'id_vars' as the identifier variables.",
+        "Output": "df.melt(id_vars=['id_vars'])"
+    },
+    {
+        "Input": "Write a python code to calculate a rolling mean with a window size of 5 for the 'temperature' column.",
+        "Output": "df['temperature_rolling'] = df['temperature'].rolling(window=5).mean()"
+    },
+    {
+        "Input": "Write a python code to add a new column 'difference' that is the difference between 'column1' and 'column2'.",
+        "Output": "df['difference'] = df['column1'] - df['column2']"
+    },
+    {
+        "Input": "Write a python code to select rows where the 'country' column is equal to 'USA'.",
+        "Output": "df_usa = df[df['country'] == 'USA']"
+    },
+    {
+        "Input": "Write a python code to apply a lambda function to square each element in the 'score' column.",
+        "Output": "df['score'] = df['score'].apply(lambda x: x**2)"
+    },
+    {
+        "Input": "Write a python code to extract the month from the 'date' column.",
+        "Output": "df['month'] = df['date'].dt.month"
+    },
+    {
+        "Input": "Write a python code to extract the year from the 'date' column.",
+        "Output": "df['year'] = df['date'].dt.year"
+    },
+    {
+        "Input": "Write a python code to extract the day from the 'date' column.",
+        "Output": "df['day'] = df['date'].dt.day"
+    },
+    {
+        "Input": "Write a python code to get unique values in the 'city' column.",
+        "Output": "df['city'].unique()"
+    },
+    {
+        "Input": "Write a python code to count unique values in the 'city' column.",
+        "Output": "df['city'].nunique()"
+    },
+    {
+        "Input": "Write a python code to get the value counts of the 'status' column.",
+        "Output": "df['status'].value_counts()"
+    },
+    {
+        "Input": "Write a python code to normalize the 'sales' column.",
+        "Output": "df['sales_normalized'] = (df['sales'] - df['sales'].min()) / (df['sales'].max() - df['sales'].min())"
+    },
+    {
+        "Input": "Write a python code to replace values greater than 100 in 'column' with 100.",
+        "Output": "df['column'] = df['column'].apply(lambda x: 100 if x > 100 else x)"
+    },
+    {
+        "Input": "Write a python code to create a cumulative sum column for 'sales'.",
+        "Output": "df['sales_cumsum'] = df['sales'].cumsum()"
+    },
+    {
+        "Input": "Write a python code to display the dataframe's columns.",
+        "Output": "df.columns"
+    },
+    {
+        "Input": "Write a python code to create a pivot table with 'sales' as values and 'month' as index.",
+        "Output": "pd.pivot_table(df, values='sales', index='month')"
+    },
+    {
+        "Input": "Write a python code to reshape the dataframe from wide to long format.",
+        "Output": "pd.melt(df)"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 on column 'id'.",
+        "Output": "df1.merge(df2, on='id')"
+    },
+    {
+        "Input": "Write a python code to create dummy variables for a column 'category'.",
+        "Output": "pd.get_dummies(df['category'])"
+    },
+    {
+        "Input": "Write a python code to factorize the 'category' column.",
+        "Output": "df['category'] = pd.factorize(df['category'])[0]"
+    },
+    {
+        "Input": "Write a python code to check if there are any null values in the dataframe.",
+        "Output": "df.isnull().any()"
+    },
+    {
+        "Input": "Write a python code to convert a column 'price' to numeric.",
+        "Output": "df['price'] = pd.to_numeric(df['price'])"
+    },
+    {
+        "Input": "Write a python code to convert a column 'time' to timedelta.",
+        "Output": "df['time'] = pd.to_timedelta(df['time'])"
+    },
+    {
+        "Input": "Write a python code to evaluate an expression using 'eval'.",
+        "Output": "df.eval('total = price * quantity')"
+    },
+    {
+        "Input": "Write a python code to select columns of type 'int'.",
+        "Output": "df.select_dtypes(include='int')"
+    },
+    {
+        "Input": "Write a python code to convert all columns to the best possible datatypes.",
+        "Output": "df = df.convert_dtypes()"
+    },
+    {
+        "Input": "Write a python code to select rows where 'age' is greater than 30.",
+        "Output": "df.loc[df['age'] > 30]"
+    },
+    {
+        "Input": "Write a python code to select rows by position (first 10 rows).",
+        "Output": "df.iloc[:10]"
+    },
+    {
+        "Input": "Write a python code to remove a column 'name' and return it.",
+        "Output": "name = df.pop('name')"
+    },
+    {
+        "Input": "Write a python code to filter rows where 'city' is in a list of cities.",
+        "Output": "df[df['city'].isin(['New York', 'Los Angeles'])]"
+    },
+    {
+        "Input": "Write a python code to add two columns 'price' and 'tax' and store the result in 'total'.",
+        "Output": "df['total'] = df['price'] + df['tax']"
+    },
+    {
+        "Input": "Write a python code to combine two dataframes df1 and df2 using a custom function.",
+        "Output": "df = df1.combine(df2, lambda s1, s2: s1.fillna(s2))"
+    },
+    {
+        "Input": "Write a python code to apply a function to a column 'price'.",
+        "Output": "df['price'] = df['price'].apply(lambda x: x * 1.1)"
+    },
+    {
+        "Input": "Write a python code to map values in 'category' column using a dictionary.",
+        "Output": "df['category'] = df['category'].map({'A': 1, 'B': 2})"
+    },
+    {
+        "Input": "Write a python code to aggregate the 'sales' column by 'month'.",
+        "Output": "df.groupby('month')['sales'].aggregate('sum')"
+    },
+    {
+        "Input": "Write a python code to transform the 'sales' column by subtracting the mean.",
+        "Output": "df['sales'] = df['sales'].transform(lambda x: x - x.mean())"
+    },
+    {
+        "Input": "Write a python code to assign a new column 'discount' with a value of 0.1.",
+        "Output": "df = df.assign(discount=0.1)"
+    },
+    {
+        "Input": "Write a python code to explode a list column 'tags' into separate rows.",
+        "Output": "df = df.explode('tags')"
+    },
+    {
+        "Input": "Write a python code to sort the dataframe by 'price'.",
+        "Output": "df.sort_values(by='price', inplace=True)"
+    },
+    {
+        "Input": "Write a python code to replace values in 'category' column.",
+        "Output": "df['category'].replace({'A': 'Alpha', 'B': 'Beta'}, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to forward fill missing values in the dataframe.",
+        "Output": "df.ffill(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to interpolate missing values in the dataframe.",
+        "Output": "df.interpolate(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to fill missing values with 0.",
+        "Output": "df.fillna(0, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to backfill missing values in the dataframe.",
+        "Output": "df.bfill(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to filter the dataframe for rows where 'age' is not null.",
+        "Output": "df = df[df['age'].notnull()]"
+    },
+    {
+        "Input": "Write a python code to count the number of non-NA/null values in each column.",
+        "Output": "df.count()"
+    },
+    {
+        "Input": "Provide a Python script to remove rows with missing values from a DataFrame.",
+        "Output": "df.dropna(inplace=True)"
+    },
+    {
+        "Input": "How can I drop rows containing nulls in a DataFrame using Python?",
+        "Output": "df.dropna(inplace=True)"
+    },
+    {
+        "Input": "Show me the Python code to eliminate rows with NaN values in a DataFrame.",
+        "Output": "df.dropna(inplace=True)"
+    },
+    {
+        "Input": "Write a Python function to delete rows with null values from a DataFrame.",
+        "Output": "df.dropna(inplace=True)"
+    },
+    {
+        "Input": "Give me the Python code for dropping rows with empty cells in a DataFrame.",
+        "Output": "df.dropna(inplace=True)"
+    },
+    {
+        "Input": "What is the Python code to discard rows with null entries in a DataFrame?",
+        "Output": "df.dropna(inplace=True)"
+    },
+    {
+        "Input": "Write a Python command to exclude rows with missing data from a DataFrame.",
+        "Output": "df.dropna(inplace=True)"
+    },
+    {
+        "Input": "Can you provide the Python code to remove rows with NaN values in a DataFrame?",
+        "Output": "df.dropna(inplace=True)"
+    },
+    {
+        "Input": "How do you drop rows with null values in a DataFrame using Python?",
+        "Output": "df.dropna(inplace=True)"
+    },
+    {
+        "Input": "Generate Python code to filter out rows with null values in a DataFrame.",
+        "Output": "df.dropna(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to remove the 'gender' column from a dataframe.",
+        "Output": "df.drop(['gender'], axis=1, inplace=True)"
+    },
+    {
+        "Input": "Write a python script to delete the column named 'gender' from a dataframe.",
+        "Output": "df.drop(['gender'], axis=1, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to exclude the 'gender' column from a dataframe.",
+        "Output": "df.drop(['gender'], axis=1, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to discard the 'gender' column in a dataframe.",
+        "Output": "df.drop(['gender'], axis=1, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to drop the 'gender' column in a dataframe.",
+        "Output": "df.drop(['gender'], axis=1, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to eliminate the 'gender' column from a dataframe.",
+        "Output": "df.drop(['gender'], axis=1, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to get rid of the 'gender' column in a dataframe.",
+        "Output": "df.drop(['gender'], axis=1, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to drop the column 'gender' in a dataframe.",
+        "Output": "df.drop(['gender'], axis=1, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to remove the column 'gender' from a dataframe.",
+        "Output": "df.drop(['gender'], axis=1, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to drop the 'gender' column from the dataframe.",
+        "Output": "df.drop(['gender'], axis=1, inplace=True)"
+    },
+    {
+        "Input": "Show the first 10 rows of a dataframe using python code.",
+        "Output": "df.head(10)"
+    },
+    {
+        "Input": "How to print the top 10 rows of a dataframe in python?",
+        "Output": "df.head(10)"
+    },
+    {
+        "Input": "Provide python code to get the first 10 rows of a dataframe.",
+        "Output": "df.head(10)"
+    },
+    {
+        "Input": "Write a python script to retrieve the first 10 rows from a dataframe.",
+        "Output": "df.head(10)"
+    },
+    {
+        "Input": "Give the python command to view the initial 10 rows of a dataframe.",
+        "Output": "df.head(10)"
+    },
+    {
+        "Input": "What's the python code to display the first 10 entries of a dataframe?",
+        "Output": "df.head(10)"
+    },
+    {
+        "Input": "How can I use python to show the first 10 records of a dataframe?",
+        "Output": "df.head(10)"
+    },
+    {
+        "Input": "Write a python code snippet to fetch the first 10 rows of a dataframe.",
+        "Output": "df.head(10)"
+    },
+    {
+        "Input": "Show me how to display the top 10 rows of a dataframe in python.",
+        "Output": "df.head(10)"
+    },
+    {
+        "Input": "Show the Python code to view the last 10 rows of a dataframe.",
+        "Output": "df.tail(10)"
+    },
+    {
+        "Input": "How to display the last 10 entries of a dataframe using Python?",
+        "Output": "df.tail(10)"
+    },
+    {
+        "Input": "Provide a Python snippet to get the final 10 rows in a dataframe.",
+        "Output": "df.tail(10)"
+    },
+    {
+        "Input": "Write a Python command to see the last 10 rows of a dataframe.",
+        "Output": "df.tail(10)"
+    },
+    {
+        "Input": "What is the Python code to retrieve the last 10 rows from a dataframe?",
+        "Output": "df.tail(10)"
+    },
+    {
+        "Input": "Generate Python code to show the last 10 rows of a dataframe.",
+        "Output": "df.tail(10)"
+    },
+    {
+        "Input": "How do you display the last 10 rows in a dataframe with Python?",
+        "Output": "df.tail(10)"
+    },
+    {
+        "Input": "Demonstrate Python code to list the last 10 rows of a dataframe.",
+        "Output": "df.tail(10)"
+    },
+    {
+        "Input": "Write a Python function to print the last 10 rows in a dataframe.",
+        "Output": "df.tail(10)"
+    },
+    {
+        "Input": "Show the last 10 rows of a dataframe using Python code.",
+        "Output": "df.tail(10)"
+    },
+    {
+        "Input": "Show the datatypes of columns in a dataframe using pandas.",
+        "Output": "df.dtypes"
+    },
+    {
+        "Input": "Write a python code to print the data types of columns in a pandas dataframe.",
+        "Output": "df.dtypes"
+    },
+    {
+        "Input": "How to get the datatype of each column in a pandas dataframe using python code?",
+        "Output": "df.dtypes"
+    },
+    {
+        "Input": "Write a python code to get the datatypes of columns in a pandas dataframe.",
+        "Output": "df.dtypes"
+    },
+    {
+        "Input": "Display the datatype of each column in a pandas dataframe.",
+        "Output": "df.dtypes"
+    },
+    {
+        "Input": "Write a python code to show the datatype of columns in a pandas dataframe.",
+        "Output": "df.dtypes"
+    },
+    {
+        "Input": "Print the data types of columns in a pandas dataframe using python.",
+        "Output": "df.dtypes"
+    },
+    {
+        "Input": "Write a python code to get the data types of columns in a pandas dataframe.",
+        "Output": "df.dtypes"
+    },
+    {
+        "Input": "Show the data types of columns in a pandas dataframe with python code.",
+        "Output": "df.dtypes"
+    },
+    {
+        "Input": "Write a python code to return numpy representation of the data excluding index and columns.",
+        "Output": "df.values"
+    },
+    {
+        "Input": "Write a python code to convert dataframe to a numpy array.",
+        "Output": "np.array(df)"
+    },
+    {
+        "Input": "Write a python code to get numpy representation of dataframe.",
+        "Output": "df.to_numpy(copy=True)"
+    },
+    {
+        "Input": "Write a python code to obtain a numpy array from dataframe excluding index and column labels.",
+        "Output": "df.to_numpy(copy=False)"
+    },
+    {
+        "Input": "Write a python code to return a numpy array representation of dataframe.",
+        "Output": "df.to_numpy()"
+    },
+    {
+        "Input": "Write a python code to extract the underlying data of dataframe as a numpy array.",
+        "Output": "np.array(df.values)"
+    },
+    {
+        "Input": "Write a python code to convert dataframe data to a numpy array.",
+        "Output": "df.values"
+    },
+    {
+        "Input": "Write a python code to get a numpy array representation of dataframe data without index or columns.",
+        "Output": "df.to_numpy()"
+    },
+    {
+        "Input": "Write a python code to obtain numpy array representation of dataframe data excluding index and columns.",
+        "Output": "df.to_numpy()"
+    },
+    {
+        "Input": "Write a python code to display a summary of statistics for numerical columns in the dataframe.",
+        "Output": "df.describe()"
+    },
+    {
+        "Input": "Write a python code to get a summary of statistics such as count, mean, std, min, 25%, 50%, 75%, and max for the dataframe.",
+        "Output": "df.describe()"
+    },
+    {
+        "Input": "Write a python code to summarize the statistical characteristics of the dataframe.",
+        "Output": "df.describe()"
+    },
+    {
+        "Input": "Write a python code to print a summary of the statistical properties of the dataframe.",
+        "Output": "df.describe()"
+    },
+    {
+        "Input": "Write a python code to generate a summary of statistics for the dataframe.",
+        "Output": "df.describe()"
+    },
+    {
+        "Input": "Write a python code to display summary statistics for the dataframe.",
+        "Output": "df.describe()"
+    },
+    {
+        "Input": "Write a python code to compute descriptive statistics for the dataframe.",
+        "Output": "df.describe()"
+    },
+    {
+        "Input": "Write a python code to produce a summary of statistics for the dataframe.",
+        "Output": "df.describe()"
+    },
+    {
+        "Input": "Write a python code to provide a statistical summary of the dataframe.",
+        "Output": "df.describe()"
+    },
+    {
+        "Input": "Write a python code to sort data by an axis using sort_values method.",
+        "Output": "df.sort_values(by='column_name')"
+    },
+    {
+        "Input": "Write a python code to sort data by an axis in descending order using sort_values method.",
+        "Output": "df.sort_values(by='column_name', ascending=False)"
+    },
+    {
+        "Input": "Write a python code to sort data by an axis using sort_index method.",
+        "Output": "df.sort_index(axis=0)"
+    },
+    {
+        "Input": "Write a python code to sort data by an axis in descending order using sort_index method.",
+        "Output": "df.sort_index(axis=1, ascending=False)"
+    },
+    {
+        "Input": "Write a python code to sort data by an axis using numpy lexsort.",
+        "Output": "df.iloc[np.lexsort((df.index, df['column_name']))]"
+    },
+    {
+        "Input": "Write a python code to sort data by an axis using numpy argsort.",
+        "Output": "df.iloc[df['column_name'].argsort()]"
+    },
+    {
+        "Input": "Write a python code to sort data by an axis using numpy argsort in descending order.",
+        "Output": "df.iloc[df['column_name'].argsort()[::-1]]"
+    },
+    {
+        "Input": "Write a python code to sort data by an axis using nlargest.",
+        "Output": "df.nlargest(n, 'column_name')"
+    },
+    {
+        "Input": "Write a python code to sort data by an axis using nsmallest.",
+        "Output": "df.nsmallest(n, 'column_name')"
+    },
+    {
+        "Input": "Write a python code to sort data by an axis using apply with a lambda function.",
+        "Output": "df.sort_values(by=lambda x: x['column_name'])"
+    },
+    {
+        "Input": "Fill NaN values with 0 in a dataframe",
+        "Output": "df.fillna(0, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to replace NaN with 0",
+        "Output": "df.replace(to_replace=np.nan, value=0, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to fill NaN with 0 in pandas dataframe",
+        "Output": "df.fillna(0, inplace=True)"
+    },
+    {
+        "Input": "Fill missing values with 0 in pandas dataframe",
+        "Output": "df.fillna(0, inplace=True)"
+    },
+    {
+        "Input": "Replace missing values with 0 in a pandas dataframe",
+        "Output": "df.fillna(0, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to handle missing values by filling 0",
+        "Output": "df.fillna(0, inplace=True)"
+    },
+    {
+        "Input": "Fill null values with 0 in pandas dataframe",
+        "Output": "df.fillna(0, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to fill na values with 0",
+        "Output": "df.fillna(0, inplace=True)"
+    },
+    {
+        "Input": "Replace NaN values with 0 in pandas dataframe",
+        "Output": "df.fillna(0, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 using inner join.",
+        "Output": "pd.merge(df1, df2, how='inner', left_on='key_column_df1', right_on='key_column_df2')"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 using left join.",
+        "Output": "pd.merge(df1, df2, how='left', left_on='key_column_df1', right_on='key_column_df2')"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 using right join.",
+        "Output": "pd.merge(df1, df2, how='right', left_on='key_column_df1', right_on='key_column_df2')"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 using outer join.",
+        "Output": "pd.merge(df1, df2, how='outer', left_on='key_column_df1', right_on='key_column_df2')"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 by concatenating along rows.",
+        "Output": "pd.concat([df1, df2], axis=0, ignore_index=True)"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 by concatenating along columns.",
+        "Output": "pd.concat([df1, df2], axis=1)"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 by adding df2 as new rows to df1.",
+        "Output": "df1.append(df2, ignore_index=True)"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 using a cross join (cartesian product).",
+        "Output": "df1.assign(key=1).merge(df2.assign(key=1), on='key').drop('key', axis=1)"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 using an inner join with specifying suffixes.",
+        "Output": "pd.merge(df1, df2, how='inner', left_on='key_column_df1', right_on='key_column_df2', suffixes=('_df1', '_df2'))"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 by performing a SQL-style merge.",
+        "Output": "df1.merge(df2, left_on='key_column_df1', right_on='key_column_df2')"
+    },
+    {
+        "Input": "Write a python code to concatenate two dataframes df1 and df2 along rows.",
+        "Output": "pd.concat([df1, df2], axis=0)"
+    },
+    {
+        "Input": "Write a python code to concatenate two dataframes df1 and df2 along rows using append method.",
+        "Output": "df1.append(df2)"
+    },
+    {
+        "Input": "Write a python code to concatenate two dataframes df1 and df2 along rows using concat function with ignore_index set to True.",
+        "Output": "pd.concat([df1, df2], axis=0, ignore_index=True)"
+    },
+    {
+        "Input": "Write a python code to concatenate two dataframes df1 and df2 along rows using the DataFrame constructor.",
+        "Output": "pd.DataFrame(np.vstack([df1, df2]), columns=df1.columns)"
+    },
+    {
+        "Input": "Write a python code to concatenate two dataframes df1 and df2 along rows using the append function and reset_index.",
+        "Output": "df1.append(df2, ignore_index=True)"
+    },
+    {
+        "Input": "Write a python code to concatenate two dataframes df1 and df2 along rows using the concat function with axis='index'.",
+        "Output": "pd.concat([df1, df2], axis='index')"
+    },
+    {
+        "Input": "Write a python code to concatenate two dataframes df1 and df2 along rows using the append function with sort=False.",
+        "Output": "df1.append(df2, sort=False)"
+    },
+    {
+        "Input": "Write a python code to concatenate two dataframes df1 and df2 along rows using the concat function with axis=0 and keys.",
+        "Output": "pd.concat([df1, df2], axis=0, keys=['df1', 'df2'])"
+    },
+    {
+        "Input": "Write a python code to concatenate two dataframes df1 and df2 along rows using the concat function and inner join.",
+        "Output": "pd.concat([df1, df2], axis=0, join='inner')"
+    },
+    {
+        "Input": "Write a python code to concatenate two dataframes df1 and df2 along rows and drop duplicates.",
+        "Output": "pd.concat([df1, df2], axis=0).drop_duplicates()"
+    },
+    {
+        "Input": "Concatenate two dataframes df1 and df2 along columns.",
+        "Output": "pd.concat(objs=[df1, df2], axis=1)"
+    },
+    {
+        "Input": "Combine two dataframes df1 and df2 along columns.",
+        "Output": "pd.concat([df1, df2], join='outer', axis=1)"
+    },
+    {
+        "Input": "Merge two dataframes df1 and df2 horizontally.",
+        "Output": "pd.concat([df1, df2], axis='columns')"
+    },
+    {
+        "Input": "Join two dataframes df1 and df2 side by side.",
+        "Output": "pd.concat([df1, df2], keys=['df1', 'df2'], axis=1)"
+    },
+    {
+        "Input": "Horizontal concatenate of df1 and df2.",
+        "Output": "pd.concat([df1, df2], axis='columns', ignore_index=True)"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 along columns.",
+        "Output": "pd.merge(df1, df2, left_index=True, right_index=True)"
+    },
+    {
+        "Input": "Join df1 and df2 side by side in pandas.",
+        "Output": "pd.concat([df1, df2], axis=1, join='inner')"
+    },
+    {
+        "Input": "Combine df1 and df2 horizontally.",
+        "Output": "pd.concat([df1, df2], axis='columns', join='outer')"
+    },
+    {
+        "Input": "Concatenate two dataframes df1 and df2 along the columns axis.",
+        "Output": "pd.concat([df1, df2], axis='columns', verify_integrity=True)"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks where marks is greater than 50.",
+        "Output": "df[df['marks'] > 50]"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks where marks is less than 50.",
+        "Output": "df[df['marks'] < 50]"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks where marks is equal to 50.",
+        "Output": "df[df['marks'] == 50]"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks where marks is not equal to 50.",
+        "Output": "df[df['marks'] != 50]"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks where marks is greater than or equal to 50.",
+        "Output": "df[df['marks'] >= 50]"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks where marks is less than or equal to 50.",
+        "Output": "df[df['marks'] <= 50]"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks where marks is between 40 and 60.",
+        "Output": "df[(df['marks'] >= 40) & (df['marks'] <= 60)]"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks where marks is NaN.",
+        "Output": "df[df['marks'].isna()]"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks where marks is not NaN.",
+        "Output": "df[df['marks'].notna()]"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks where marks contains a specific value 'pass'.",
+        "Output": "df[df['marks'].str.contains('pass', case=False, na=False)]"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks using query with equality condition.",
+        "Output": "df.query('marks == 10')"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks using query with inequality condition.",
+        "Output": "df.query('marks != 10')"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks using query with greater than or equal to condition.",
+        "Output": "df.query('marks >= 10')"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks using query with less than or equal to condition.",
+        "Output": "df.query('marks <= 10')"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks using query with multiple conditions.",
+        "Output": "df.query('marks > 5 and marks < 15')"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks using query with 'in' condition.",
+        "Output": "df.query('marks in [10, 20, 30]')"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks using query with 'not in' condition.",
+        "Output": "df.query('marks not in [10, 20, 30]')"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks using query with 'startswith' condition.",
+        "Output": "df.query('marks.str.startswith('A')', engine='python')"
+    },
+    {
+        "Input": "Write a python code to filter the data of column marks using query with 'contains' condition.",
+        "Output": "df.query('marks.str.contains('nan')', engine='python')"
+    },
+    {
+        "Input": "Write a python code to rename a column name to first_name using df.rename().",
+        "Output": "df.rename(columns={'name': 'first_name'}, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to rename a column name to first_name using df.columns.",
+        "Output": "df.columns = ['first_name' if x=='name' else x for x in df.columns]"
+    },
+    {
+        "Input": "Write a python code to rename a column name to first_name using df.columns.",
+        "Output": "df.columns = df.columns.str.replace('name', 'first_name')"
+    },
+    {
+        "Input": "Write a python code to rename a column name to first_name using df.columns.",
+        "Output": "df.columns.values[df.columns.get_loc('name')] = 'first_name'"
+    },
+    {
+        "Input": "Write a python code to rename a column name to first_name using df.rename() and dictionary mapping.",
+        "Output": "df.rename(columns={'name': 'first_name'}, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to rename a column name to first_name using df.rename() and a list.",
+        "Output": "df.rename(columns=dict(name='first_name'), inplace=True)"
+    },
+    {
+        "Input": "Write a python code to rename a column name to first_name using df.rename() and a function.",
+        "Output": "df.rename(columns=lambda x: 'first_name' if x == 'name' else x, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to rename a column name to first_name using df.rename() and a dict comprehension.",
+        "Output": "df.rename(columns={col: 'first_name' if col == 'name' else col for col in df.columns}, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to rename a column name to first_name using df.columns and replace().",
+        "Output": "df.columns = df.columns.str.replace('name', 'first_name')"
+    },
+    {
+        "Input": "Write a python code to rename a column name to first_name using df.rename() and a list comprehension.",
+        "Output": "df.rename(columns={old_name: new_name for old_name, new_name in zip(df.columns, ['first_name' if col == 'name' else col for col in df.columns])}, inplace=True)"
+    },
+    {
+        "Input": "Write a python code for deleting duplicate data.",
+        "Output": "df.drop_duplicates(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to remove duplicate records.",
+        "Output": "df.drop_duplicates(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to delete rows with duplicate data.",
+        "Output": "df.drop_duplicates(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to remove duplicate entries.",
+        "Output": "df.drop_duplicates(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to drop duplicate data.",
+        "Output": "df.drop_duplicates(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to eliminate duplicate records.",
+        "Output": "df.drop_duplicates(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to delete duplicate rows in a dataframe.",
+        "Output": "df.drop_duplicates(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to remove duplicate data entries.",
+        "Output": "df.drop_duplicates(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to drop duplicate records.",
+        "Output": "df.drop_duplicates(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to remove duplicate rows.",
+        "Output": "df.drop_duplicates(inplace=True)"
+    },
+    {
+        "Input": "Group by column 'category' and calculate the sum of 'sales'.",
+        "Output": "df.groupby('category')['sales'].sum()"
+    },
+    {
+        "Input": "Group by multiple columns 'region' and 'month' and calculate the mean of 'temperature'.",
+        "Output": "df.groupby(['region', 'month'])['temperature'].mean()"
+    },
+    {
+        "Input": "Group by column 'year' and calculate the maximum 'revenue'.",
+        "Output": "df.groupby('year')['revenue'].max()"
+    },
+    {
+        "Input": "Group by column 'city' and count the number of occurrences.",
+        "Output": "df['city'].value_counts()"
+    },
+    {
+        "Input": "Group by column 'category' and calculate descriptive statistics for 'sales'.",
+        "Output": "df.groupby('category')['sales'].describe()"
+    },
+    {
+        "Input": "Group by column 'month' and calculate multiple aggregations for 'temperature' and 'humidity'.",
+        "Output": "df.groupby('month').agg({'temperature': 'mean', 'humidity': 'max'})"
+    },
+    {
+        "Input": "Group by column 'weekday' and calculate the total sum of all numeric columns.",
+        "Output": "df.groupby('weekday').sum()"
+    },
+    {
+        "Input": "Group by column 'country' and calculate the median 'population'.",
+        "Output": "df.groupby('country')['population'].median()"
+    },
+    {
+        "Input": "Group by column 'year' and calculate the average 'price' and maximum 'quantity'.",
+        "Output": "df.groupby('year').agg({'price': 'mean', 'quantity': 'max'})"
+    },
+    {
+        "Input": "Write a python code to convert column mean to float datatype.",
+        "Output": "df['mean'] = df['mean'].astype(float)"
+    },
+    {
+        "Input": "Write a python code to cast column mean to float type.",
+        "Output": "df['mean'] = df['mean'].astype('float64')"
+    },
+    {
+        "Input": "Write a python code to change column mean's datatype to float.",
+        "Output": "df['mean'] = df['mean'].astype(float)"
+    },
+    {
+        "Input": "Write a python code to alter datatype of column mean to float.",
+        "Output": "df['mean'] = df['mean'].astype('float')"
+    },
+    {
+        "Input": "Write a python code to set column mean to float type.",
+        "Output": "df['mean'] = df['mean'].astype(float)"
+    },
+    {
+        "Input": "Write a python code to modify datatype of column mean to float.",
+        "Output": "df['mean'] = df['mean'].astype('float')"
+    },
+    {
+        "Input": "Write a python code to switch column mean to float datatype.",
+        "Output": "df['mean'] = df['mean'].astype(float)"
+    },
+    {
+        "Input": "Write a python code to transform datatype of column mean to float.",
+        "Output": "df['mean'] = df['mean'].astype('float')"
+    },
+    {
+        "Input": "Write a python code to convert column mean to float data type.",
+        "Output": "df['mean'] = df['mean'].astype(float)"
+    },
+    {
+        "Input": "Write a python code to find mean of column marks using df['marks'].mean() method.",
+        "Output": "df['marks'].mean()"
+    },
+    {
+        "Input": "Write a python code to calculate the average of column marks.",
+        "Output": "df['marks'].mean()"
+    },
+    {
+        "Input": "Write a python code to get the average value of column marks.",
+        "Output": "df['marks'].mean()"
+    },
+    {
+        "Input": "Write a python code to compute the mean value of column marks.",
+        "Output": "df['marks'].mean()"
+    },
+    {
+        "Input": "Write a python code to determine the arithmetic mean of column marks.",
+        "Output": "df['marks'].mean()"
+    },
+    {
+        "Input": "Write a python code to find the mean value of column marks in the dataframe.",
+        "Output": "df['marks'].mean()"
+    },
+    {
+        "Input": "Write a python code to calculate the mean of the 'marks' column in the dataframe.",
+        "Output": "df['marks'].mean()"
+    },
+    {
+        "Input": "Write a python code to find the average of column marks using pandas.",
+        "Output": "df['marks'].mean()"
+    },
+    {
+        "Input": "Write a python code to get the mean of column marks in the dataframe.",
+        "Output": "df['marks'].mean()"
+    },
+    {
+        "Input": "Write a python code to determine the mean of column marks.",
+        "Output": "df['marks'].mean()"
+    },
+    {
+        "Input": "Write a python code to find median of column marks using pandas.",
+        "Output": "df['marks'].median()"
+    },
+    {
+        "Input": "Write a python code to calculate the median of column 'marks'.",
+        "Output": "df['marks'].median()"
+    },
+    {
+        "Input": "Write a python code to find the median value in the 'marks' column.",
+        "Output": "df['marks'].median()"
+    },
+    {
+        "Input": "Write a python code to compute the median of column 'marks'.",
+        "Output": "df['marks'].median()"
+    },
+    {
+        "Input": "Write a python code to determine the median of column 'marks'.",
+        "Output": "df['marks'].median()"
+    },
+    {
+        "Input": "Write a python code to find the middle value of column 'marks'.",
+        "Output": "df['marks'].median()"
+    },
+    {
+        "Input": "Write a python code to find the median of column 'marks' in the dataframe.",
+        "Output": "df['marks'].median()"
+    },
+    {
+        "Input": "Write a python code to get the median value from the 'marks' column.",
+        "Output": "df['marks'].median()"
+    },
+    {
+        "Input": "Write a python code to determine the median of 'marks' column.",
+        "Output": "df['marks'].median()"
+    },
+    {
+        "Input": "Write a python code to calculate the median of the 'marks' column.",
+        "Output": "df['marks'].median()"
+    },
+    {
+        "Input": "How do you find the mode of the 'marks' column in a pandas dataframe?",
+        "Output": "df['marks'].mode()"
+    },
+    {
+        "Input": "Write a python code to calculate the most frequent value in the 'marks' column.",
+        "Output": "df['marks'].mode()"
+    },
+    {
+        "Input": "How to find the mode of the 'marks' column using pandas?",
+        "Output": "df['marks'].mode()"
+    },
+    {
+        "Input": "Write a python code to determine the mode of values in the 'marks' column.",
+        "Output": "df['marks'].mode()"
+    },
+    {
+        "Input": "What is the method to find the most common value in the 'marks' column of a dataframe?",
+        "Output": "df['marks'].mode()"
+    },
+    {
+        "Input": "Python code to find the mode of 'marks' in a pandas dataframe.",
+        "Output": "df['marks'].mode()"
+    },
+    {
+        "Input": "How do you find the most frequent value in the 'marks' column using pandas?",
+        "Output": "df['marks'].mode()"
+    },
+    {
+        "Input": "Find the mode of the 'marks' column in a pandas dataframe using python code.",
+        "Output": "df['marks'].mode()"
+    },
+    {
+        "Input": "Write python code to get the mode of values in the 'marks' column.",
+        "Output": "df['marks'].mode()"
+    },
+    {
+        "Input": "Write a python code to find the standard deviation of the 'marks' column.",
+        "Output": "df['marks'].std()"
+    },
+    {
+        "Input": "Write a python code that calculates the standard deviation for the 'marks' column in a dataframe.",
+        "Output": "df['marks'].std()"
+    },
+    {
+        "Input": "Provide a Python script to compute the standard deviation of the 'marks' column.",
+        "Output": "df['marks'].std()"
+    },
+    {
+        "Input": "Generate Python code to determine the standard deviation of values in the 'marks' column.",
+        "Output": "df['marks'].std()"
+    },
+    {
+        "Input": "How to find the standard deviation of 'marks' column in a dataframe using Python?",
+        "Output": "df['marks'].std()"
+    },
+    {
+        "Input": "Give a Python code snippet to calculate the standard deviation for 'marks' column.",
+        "Output": "df['marks'].std()"
+    },
+    {
+        "Input": "Show me how to compute the standard deviation of the 'marks' column with Python code.",
+        "Output": "df['marks'].std()"
+    },
+    {
+        "Input": "Write a Python code to get the standard deviation of the 'marks' column in a dataframe.",
+        "Output": "df['marks'].std()"
+    },
+    {
+        "Input": "What is the Python code for finding the standard deviation of the 'marks' column?",
+        "Output": "df['marks'].std()"
+    },
+    {
+        "Input": "Craft a Python script to calculate the standard deviation of the 'marks' column.",
+        "Output": "df['marks'].std()"
+    },
+    {
+        "Input": "Write a python script to calculate the variance of the marks column.",
+        "Output": "df['marks'].var()"
+    },
+    {
+        "Input": "How do you find the variance of the 'marks' column in pandas?",
+        "Output": "df['marks'].var()"
+    },
+    {
+        "Input": "Generate Python code to determine the variance for the 'marks' column.",
+        "Output": "df['marks'].var()"
+    },
+    {
+        "Input": "Create a Python function to compute the variance of the 'marks' column.",
+        "Output": "df['marks'].var()"
+    },
+    {
+        "Input": "Show me how to get the variance of 'marks' in a DataFrame using Python.",
+        "Output": "df['marks'].var()"
+    },
+    {
+        "Input": "Provide a Python example to find variance of column 'marks'.",
+        "Output": "df['marks'].var()"
+    },
+    {
+        "Input": "Write a Python code snippet to calculate variance for 'marks' column.",
+        "Output": "df['marks'].var()"
+    },
+    {
+        "Input": "How can I compute the variance of the 'marks' column in pandas?",
+        "Output": "df['marks'].var()"
+    },
+    {
+        "Input": "Show Python code for getting the variance of the 'marks' column in a DataFrame.",
+        "Output": "df['marks'].var()"
+    },
+    {
+        "Input": "Write a python code to find correlation between 'marks' and 'result' columns.",
+        "Output": "df['marks'].corr(df['result'])"
+    },
+    {
+        "Input": "Input a Python code to calculate the correlation of the 'marks' column with 'result'.",
+        "Output": "df['marks'].corr(df['result'])"
+    },
+    {
+        "Input": "Provide a Python code to determine the correlation between the 'marks' and 'result' columns.",
+        "Output": "df['marks'].corr(df['result'])"
+    },
+    {
+        "Input": "Generate Python code to find the correlation coefficient of 'marks' with 'result'.",
+        "Output": "df['marks'].corr(df['result'])"
+    },
+    {
+        "Input": "How to write a Python code to get the correlation of 'marks' column with 'result' column?",
+        "Output": "df['marks'].corr(df['result'])"
+    },
+    {
+        "Input": "Show Python code to compute correlation between 'marks' and 'result'.",
+        "Output": "df['marks'].corr(df['result'])"
+    },
+    {
+        "Input": "Write a Python code snippet to find the correlation of 'marks' and 'result'.",
+        "Output": "df['marks'].corr(df['result'])"
+    },
+    {
+        "Input": "Code in Python to determine the correlation of the 'marks' column with the 'result' column.",
+        "Output": "df['marks'].corr(df['result'])"
+    },
+    {
+        "Input": "What is the Python code to calculate the correlation between 'marks' and 'result'?",
+        "Output": "df['marks'].corr(df['result'])"
+    },
+    {
+        "Input": "Python code to find correlation coefficient of 'marks' with 'result'.",
+        "Output": "df['marks'].corr(df['result'])"
+    },
+    {
+        "Input": "Write a python code to calculate the covariance between the 'marks' column and the 'result' column.",
+        "Output": "df['marks'].cov(df['result'])"
+    },
+    {
+        "Input": "Write a python code to find the covariance of 'marks' and 'result' columns.",
+        "Output": "df['marks'].cov(df['result'])"
+    },
+    {
+        "Input": "Write a python code to determine the covariance between marks and result.",
+        "Output": "df['marks'].cov(df['result'])"
+    },
+    {
+        "Input": "Write a python code to compute the covariance of the marks column with the result column.",
+        "Output": "df['marks'].cov(df['result'])"
+    },
+    {
+        "Input": "Write a python code to get the covariance value for 'marks' and 'result' columns.",
+        "Output": "df['marks'].cov(df['result'])"
+    },
+    {
+        "Input": "Write a python code to derive the covariance between 'marks' and 'result'.",
+        "Output": "df['marks'].cov(df['result'])"
+    },
+    {
+        "Input": "Write a python code to extract the covariance for the columns 'marks' and 'result'.",
+        "Output": "df['marks'].cov(df['result'])"
+    },
+    {
+        "Input": "Write a python code to obtain the covariance between marks and result columns.",
+        "Output": "df['marks'].cov(df['result'])"
+    },
+    {
+        "Input": "Write a python code to assess the covariance of 'marks' with 'result'.",
+        "Output": "df['marks'].cov(df['result'])"
+    },
+    {
+        "Input": "Write a python code to evaluate the covariance between the columns 'marks' and 'result'.",
+        "Output": "df['marks'].cov(df['result'])"
+    },
+    {
+        "Input": "Write a python code to reset the index of a dataframe.",
+        "Output": "df.reset_index(drop=True, inplace=True)"
+    },
+    {
+        "Input": "Provide a python code to reset the index in a dataframe.",
+        "Output": "df.reset_index(drop=True, inplace=True)"
+    },
+    {
+        "Input": "Show a python code snippet to reset the dataframe index.",
+        "Output": "df.reset_index(drop=True, inplace=True)"
+    },
+    {
+        "Input": "How to reset the index of a dataframe using python code?",
+        "Output": "df.reset_index(drop=True, inplace=True)"
+    },
+    {
+        "Input": "Demonstrate how to reset the index in a pandas dataframe with python.",
+        "Output": "df.reset_index(drop=True, inplace=True)"
+    },
+    {
+        "Input": "Give me a python code to reset the index of a pandas dataframe.",
+        "Output": "df.reset_index(drop=True, inplace=True)"
+    },
+    {
+        "Input": "What is the python code to reset a dataframe's index?",
+        "Output": "df.reset_index(drop=True, inplace=True)"
+    },
+    {
+        "Input": "Write the python code for resetting the index of a dataframe.",
+        "Output": "df.reset_index(drop=True, inplace=True)"
+    },
+    {
+        "Input": "Provide code to reset the index of a dataframe in pandas.",
+        "Output": "df.reset_index(drop=True, inplace=True)"
+    },
+    {
+        "Input": "Show me the python code to reset the index in a pandas dataframe.",
+        "Output": "df.reset_index(drop=True, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to set 'id' column as the index.",
+        "Output": "df.set_index('id', inplace=True)"
+    },
+    {
+        "Input": "Write a python code to make the column 'id' the index.",
+        "Output": "df.set_index('id', inplace=True)"
+    },
+    {
+        "Input": "Write a python code to use 'id' column as the dataframe index.",
+        "Output": "df.set_index('id', inplace=True)"
+    },
+    {
+        "Input": "Write a python code to assign 'id' column as index.",
+        "Output": "df.set_index('id', inplace=True)"
+    },
+    {
+        "Input": "Write a python code to change the dataframe index to 'id' column.",
+        "Output": "df.set_index('id', inplace=True)"
+    },
+    {
+        "Input": "Write a python code to reassign the index to 'id' column.",
+        "Output": "df.set_index('id', inplace=True)"
+    },
+    {
+        "Input": "Write a python code to set the index of the dataframe to 'id' column.",
+        "Output": "df.set_index('id', inplace=True)"
+    },
+    {
+        "Input": "Write a python code to use 'id' as the new index.",
+        "Output": "df.set_index('id', inplace=True)"
+    },
+    {
+        "Input": "Write a python code to set the column named 'id' as the index.",
+        "Output": "df.set_index('id', inplace=True)"
+    },
+    {
+        "Input": "Write a python code to designate 'id' column as the index.",
+        "Output": "df.set_index('id', inplace=True)"
+    },
+    {
+        "Input": "Write a python code to create a new column 'status' where marks greater than 50 is 'Pass' and otherwise 'Fail'.",
+        "Output": "df['status'] = df['marks'].apply(lambda x: 'Pass' if x > 50 else 'Fail')"
+    },
+    {
+        "Input": "Write a python code to add a column 'status' with 'Pass' if marks are above 50, otherwise 'Fail'.",
+        "Output": "df['status'] = df['marks'].apply(lambda x: 'Pass' if x > 50 else 'Fail')"
+    },
+    {
+        "Input": "Write a python code to create a 'status' column indicating 'Pass' for marks over 50 and 'Fail' otherwise.",
+        "Output": "df['status'] = df['marks'].apply(lambda x: 'Pass' if x > 50 else 'Fail')"
+    },
+    {
+        "Input": "Write a python code to generate a 'status' column with 'Pass' for marks greater than 50 and 'Fail' for marks 50 or below.",
+        "Output": "df['status'] = df['marks'].apply(lambda x: 'Pass' if x > 50 else 'Fail')"
+    },
+    {
+        "Input": "Write a python code to insert a new column 'status' where marks exceeding 50 are labeled as 'Pass' and others as 'Fail'.",
+        "Output": "df['status'] = df['marks'].apply(lambda x: 'Pass' if x > 50 else 'Fail')"
+    },
+    {
+        "Input": "Write a python code to add a column 'status' that assigns 'Pass' to marks over 50, otherwise 'Fail'.",
+        "Output": "df['status'] = df['marks'].apply(lambda x: 'Pass' if x > 50 else 'Fail')"
+    },
+    {
+        "Input": "Write a python code to create a column 'status' setting 'Pass' for marks above 50, otherwise 'Fail'.",
+        "Output": "df['status'] = df['marks'].apply(lambda x: 'Pass' if x > 50 else 'Fail')"
+    },
+    {
+        "Input": "Write a python code to make a new column 'status' where 'Pass' is assigned if marks are greater than 50, else 'Fail'.",
+        "Output": "df['status'] = df['marks'].apply(lambda x: 'Pass' if x > 50 else 'Fail')"
+    },
+    {
+        "Input": "Write a python code to form a new 'status' column marking 'Pass' for marks higher than 50, otherwise 'Fail'.",
+        "Output": "df['status'] = df['marks'].apply(lambda x: 'Pass' if x > 50 else 'Fail')"
+    },
+    {
+        "Input": "Write a python code to add a 'status' column to the dataframe, marking 'Pass' for marks over 50 and 'Fail' for the rest.",
+        "Output": "df['status'] = df['marks'].apply(lambda x: 'Pass' if x > 50 else 'Fail')"
+    },
+    {
+        "Input": "Write a python code to calculate the maximum value of the 'height' column.",
+        "Output": "df['height'].max()"
+    },
+    {
+        "Input": "Write a python script to find the highest value in the 'height' column.",
+        "Output": "df['height'].max()"
+    },
+    {
+        "Input": "Write a python code to get the max value of the 'height' column in a dataframe.",
+        "Output": "df['height'].max()"
+    },
+    {
+        "Input": "Provide a python code to determine the maximum value of the 'height' column.",
+        "Output": "df['height'].max()"
+    },
+    {
+        "Input": "Write a python code to extract the maximum value from the 'height' column.",
+        "Output": "df['height'].max()"
+    },
+    {
+        "Input": "Write a python code to compute the max value of the 'height' column.",
+        "Output": "df['height'].max()"
+    },
+    {
+        "Input": "Write a python code to find the maximum entry in the 'height' column.",
+        "Output": "df['height'].max()"
+    },
+    {
+        "Input": "Write a python code to fetch the highest value from the 'height' column.",
+        "Output": "df['height'].max()"
+    },
+    {
+        "Input": "Write a python code to identify the maximum value in the 'height' column.",
+        "Output": "df['height'].max()"
+    },
+    {
+        "Input": "Write a python code to obtain the max value of the 'height' column.",
+        "Output": "df['height'].max()"
+    },
+    {
+        "Input": "Write a python code to calculate the minimum value of the 'height' column.",
+        "Output": "df['height'].min()"
+    },
+    {
+        "Input": "Write a python code to find the smallest value in the 'height' column.",
+        "Output": "df['height'].min()"
+    },
+    {
+        "Input": "Write a python code to get the lowest value in the 'height' column.",
+        "Output": "df['height'].min()"
+    },
+    {
+        "Input": "Write a python code to determine the minimum value in the 'height' column.",
+        "Output": "df['height'].min()"
+    },
+    {
+        "Input": "Write a python code to obtain the minimum value from the 'height' column.",
+        "Output": "df['height'].min()"
+    },
+    {
+        "Input": "Write a python code to retrieve the smallest value in the 'height' column.",
+        "Output": "df['height'].min()"
+    },
+    {
+        "Input": "Write a python code to compute the minimum value in the 'height' column.",
+        "Output": "df['height'].min()"
+    },
+    {
+        "Input": "Write a python code to find the minimum value in the 'height' column.",
+        "Output": "df['height'].min()"
+    },
+    {
+        "Input": "Write a python code to fetch the minimum value of the 'height' column.",
+        "Output": "df['height'].min()"
+    },
+    {
+        "Input": "Write a python code to acquire the minimum value in the 'height' column.",
+        "Output": "df['height'].min()"
+    },
+    {
+        "Input": "Write a python code to pivot a dataframe with 'index_column' as the index, 'columns_column' as the columns, and 'values_column' as the values.",
+        "Output": "df.pivot(index='index_column', columns='columns_column', values='values_column')"
+    },
+    {
+        "Input": "Pivot dataframe using pivot_table method with default aggregation (mean) on 'values_column'.",
+        "Output": "pd.pivot_table(df, index='index_column', columns='columns_column', values='values_column')"
+    },
+    {
+        "Input": "Pivot dataframe and fill missing values with 0.",
+        "Output": "pd.pivot_table(df, index='index_column', columns='columns_column', values='values_column', fill_value=0)"
+    },
+    {
+        "Input": "Pivot dataframe using pivot_table method with sum aggregation on 'values_column'.",
+        "Output": "pd.pivot_table(df, index='index_column', columns='columns_column', values='values_column', aggfunc='sum')"
+    },
+    {
+        "Input": "Pivot dataframe and display totals along columns.",
+        "Output": "pd.pivot_table(df, index='index_column', columns='columns_column', values='values_column', margins=True, margins_name='Total')"
+    },
+    {
+        "Input": "Pivot dataframe with hierarchical columns.",
+        "Output": "df.pivot_table(index='index_column', columns=['columns_column', 'other_column'], values='values_column')"
+    },
+    {
+        "Input": "Pivot dataframe and apply custom aggregation function.",
+        "Output": "pd.pivot_table(df, index='index_column', columns='columns_column', values='values_column', aggfunc=np.max)"
+    },
+    {
+        "Input": "Pivot dataframe and sort columns.",
+        "Output": "pd.pivot_table(df, index='index_column', columns='columns_column', values='values_column').sort_index(axis=1)"
+    },
+    {
+        "Input": "Pivot dataframe and rename columns.",
+        "Output": "pd.pivot_table(df, index='index_column', columns='columns_column', values='values_column').rename(columns={'old_name': 'new_name'})"
+    },
+    {
+        "Input": "Pivot dataframe and handle multi-index with stack.",
+        "Output": "pd.pivot_table(df, index='index_column', columns='columns_column', values='values_column').stack()"
+    },
+    {
+        "Input": "Write a python code to melt a dataframe with 'id_vars' as the identifier variables.",
+        "Output": "df.melt(id_vars=['id_vars'])"
+    },
+    {
+        "Input": "Convert a dataframe into long format with 'id_vars' as identifier variables.",
+        "Output": "pd.melt(df, id_vars=['id_vars'])"
+    },
+    {
+        "Input": "Reshape a dataframe into a long format with 'id_vars' as identifier variables.",
+        "Output": "df.melt(value_vars=df.columns.difference(['id_vars']), id_vars=['id_vars'])"
+    },
+    {
+        "Input": "Transform a dataframe into a tidy format using 'id_vars' as identifier variables.",
+        "Output": "df.melt(value_vars=df.columns[df.columns != 'id_vars'], id_vars=['id_vars'])"
+    },
+    {
+        "Input": "Write a python code to pivot a dataframe to a long format using 'id_vars' as identifier variables.",
+        "Output": "df.set_index('id_vars').stack().reset_index().rename(columns={'level_1': 'variable', 0: 'value'})"
+    },
+    {
+        "Input": "Convert a dataframe to a molten form with 'id_vars' as identifier variables.",
+        "Output": "pd.melt(df, id_vars=['id_vars'], var_name='variable', value_name='value')"
+    },
+    {
+        "Input": "Reshape a dataframe into a narrow format with 'id_vars' as identifier variables.",
+        "Output": "df.melt(id_vars=['id_vars'], var_name='variable', value_name='value')"
+    },
+    {
+        "Input": "Write a python code to unpivot a dataframe with 'id_vars' as identifier variables.",
+        "Output": "pd.melt(df, id_vars=['id_vars'], var_name='variable', value_name='value')"
+    },
+    {
+        "Input": "Transform a dataframe to a long form with 'id_vars' as identifier variables.",
+        "Output": "pd.melt(df, id_vars=['id_vars'])"
+    },
+    {
+        "Input": "Write a python code to convert a dataframe to a long format with 'id_vars' as identifier variables.",
+        "Output": "df.melt(id_vars=['id_vars'])"
+    },
+    {
+        "Input": "Write a python code to calculate a rolling mean with a window size of 5 for the 'temperature' column.",
+        "Output": "df['temperature_rolling'] = df['temperature'].rolling(window=5).mean()"
+    },
+    {
+        "Input": "Calculate rolling mean with a window size of 5 for 'temperature'.",
+        "Output": "df['temperature_rolling'] = df['temperature'].rolling(5).mean()"
+    },
+    {
+        "Input": "Python code for calculating rolling mean with window size 5 for 'temperature'.",
+        "Output": "df['temperature_rolling'] = df['temperature'].rolling(window=5, min_periods=1).mean()"
+    },
+    {
+        "Input": "Calculate a rolling average of 'temperature' with a window length of 5.",
+        "Output": "df['temperature_rolling'] = df['temperature'].rolling(window=5, center=False).mean()"
+    },
+    {
+        "Input": "Code to compute rolling mean for 'temperature' using a window size of 5.",
+        "Output": "df['temperature_rolling'] = df['temperature'].rolling(window=5, win_type=None).mean()"
+    },
+    {
+        "Input": "Python code to find rolling mean of 'temperature' with a window size of 5.",
+        "Output": "df['temperature_rolling'] = df['temperature'].rolling(window=5, min_periods=1, center=True).mean()"
+    },
+    {
+        "Input": "Compute rolling mean of 'temperature' with a window of 5 elements.",
+        "Output": "df['temperature_rolling'] = df['temperature'].rolling(window=5, min_periods=1, center=False).mean()"
+    },
+    {
+        "Input": "Calculate rolling average for 'temperature' with window size 5.",
+        "Output": "df['temperature_rolling'] = df['temperature'].rolling(window=5, min_periods=1, center=False, win_type=None).mean()"
+    },
+    {
+        "Input": "Python code to get rolling mean of 'temperature' with window size set to 5.",
+        "Output": "df['temperature_rolling'] = df['temperature'].rolling(window=5, min_periods=1, center=True, win_type=None).mean()"
+    },
+    {
+        "Input": "Write a Python program to calculate a rolling mean for 'temperature' with a window size of 5.",
+        "Output": "df['temperature_rolling'] = df['temperature'].rolling(window=5, min_periods=1, center=True, win_type=None).mean()"
+    },
+    {
+        "Input": "Write a python code to add a new column 'difference' that is the difference between 'column1' and 'column2'.",
+        "Output": "df['difference'] = df['column1'] - df['column2']"
+    },
+    {
+        "Input": "Write a python code to add a new column 'difference' that is the difference between 'column1' and 'column2' using numpy.",
+        "Output": "import numpy as np\n\n# Assuming df is your DataFrame\n# Add a new column 'difference'\ndf['difference'] = np.subtract(df['column1'], df['column2'])"
+    },
+    {
+        "Input": "Write a python code to add a new column 'difference' that is the difference between 'column1' and 'column2' using apply.",
+        "Output": "df['difference'] = df.apply(lambda x: x['column1'] - x['column2'], axis=1)"
+    },
+    {
+        "Input": "Write a python code to add a new column 'difference' that is the difference between 'column1' and 'column2' using assign.",
+        "Output": "df = df.assign(difference=df['column1'] - df['column2'])"
+    },
+    {
+        "Input": "Write a python code to add a new column 'difference' that is the difference between 'column1' and 'column2' using eval.",
+        "Output": "df.eval('difference = column1 - column2', inplace=True)"
+    },
+    {
+        "Input": "Write a python code to add a new column 'difference' that is the difference between 'column1' and 'column2' using insert.",
+        "Output": "df.insert(loc=3, column='difference', value=df['column1'] - df['column2'])"
+    },
+    {
+        "Input": "Write a python code to add a new column 'difference' that is the difference between 'column1' and 'column2' using loc.",
+        "Output": "df.loc[:, 'difference'] = df['column1'] - df['column2']"
+    },
+    {
+        "Input": "Write a python code to add a new column 'difference' that is the difference between 'column1' and 'column2' using assign with lambda.",
+        "Output": "df = df.assign(difference=lambda x: x['column1'] - x['column2'])"
+    },
+    {
+        "Input": "Write a python code to add a new column 'difference' that is the difference between 'column1' and 'column2' using transform.",
+        "Output": "df['difference'] = df[['column1', 'column2']].transform(lambda x: x['column1'] - x['column2'], axis=1)"
+    },
+    {
+        "Input": "Write a python code to add a new column 'difference' that is the difference between 'column1' and 'column2' using numpy.subtract.",
+        "Output": "df['difference'] = np.subtract(df['column1'], df['column2'])"
+    },
+    {
+        "Input": "Write a python code to select rows where the 'country' column is equal to 'USA'.",
+        "Output": "df_usa = df[df['country'] == 'USA']"
+    },
+    {
+        "Input": "Write a python code to select rows where the 'country' column is equal to 'USA' using loc.",
+        "Output": "df_usa = df.loc[df['country'] == 'USA']"
+    },
+    {
+        "Input": "Write a python code to select rows where the 'country' column is equal to 'USA' using query.",
+        "Output": "df_usa = df.query('country == \"USA\"')"
+    },
+    {
+        "Input": "Write a python code to filter rows where the 'country' column is equal to 'USA'.",
+        "Output": "df_usa = df[df.country == 'USA']"
+    },
+    {
+        "Input": "Write a python code to select rows where the 'country' column is equal to 'USA' using .isin().",
+        "Output": "df_usa = df[df['country'].isin(['USA'])]"
+    },
+    {
+        "Input": "Write a python code to select rows where the 'country' column is equal to 'USA' using boolean indexing.",
+        "Output": "df_usa = df[df['country'] == 'USA']"
+    },
+    {
+        "Input": "Write a python code to select rows where the 'country' column is equal to 'USA' using .loc and .at.",
+        "Output": "df_usa = df.loc[df['country'] == 'USA'].copy()"
+    },
+    {
+        "Input": "Write a python code to select rows where the 'country' column is equal to 'USA' using .loc and .iloc.",
+        "Output": "df_usa = df.loc[df['country'] == 'USA'].copy()"
+    },
+    {
+        "Input": "Write a python code to select rows where the 'country' column is equal to 'USA' using .query().",
+        "Output": "df_usa = df.query('country == \"USA\"')"
+    },
+    {
+        "Input": "Write a python code to select rows where the 'country' column is equal to 'USA' using .loc and .iat.",
+        "Output": "df_usa = df.loc[df['country'] == 'USA'].copy()"
+    },
+    {
+        "Input": "Write a python code to apply a lambda function to square each element in the 'score' column.",
+        "Output": "df['score'] = df['score'].apply(lambda x: x**2)"
+    },
+    {
+        "Input": "Write a python code to apply a numpy function to square each element in the 'score' column.",
+        "Output": "import numpy as np\n\n# Assuming df is your dataframe\n\n# Apply numpy function to square each element in the 'score' column\n\ndf['score'] = np.square(df['score'])"
+    },
+    {
+        "Input": "Write a python code to apply a list comprehension to square each element in the 'score' column.",
+        "Output": "df['score'] = [x**2 for x in df['score']]"
+    },
+    {
+        "Input": "Write a python code to apply a map function to square each element in the 'score' column.",
+        "Output": "df['score'] = df['score'].map(lambda x: x**2)"
+    },
+    {
+        "Input": "Write a python code to apply a function to square each element in the 'score' column using pandas .applymap.",
+        "Output": "df['score'] = df['score'].applymap(lambda x: x**2)"
+    },
+    {
+        "Input": "Write a python code to apply a function to square each element in the 'score' column using pandas .transform.",
+        "Output": "df['score'] = df['score'].transform(lambda x: x**2)"
+    },
+    {
+        "Input": "Write a python code to apply a function to square each element in the 'score' column using numpy's vectorized operations.",
+        "Output": "import numpy as np\n\ndf['score'] = np.power(df['score'], 2)"
+    },
+    {
+        "Input": "Write a python code to apply a function to square each element in the 'score' column using pandas .eval.",
+        "Output": "df['score'] = df.eval('score ** 2')"
+    },
+    {
+        "Input": "Write a python code to apply a function to square each element in the 'score' column using pandas .transform with a lambda function.",
+        "Output": "df['score'] = df['score'].transform(lambda x: x**2)"
+    },
+    {
+        "Input": "Write a python code to apply a function to square each element in the 'score' column using pandas .apply with a lambda function.",
+        "Output": "df['score'] = df['score'].apply(lambda x: x**2)"
+    },
+    {
+        "Input": "Write a python code to extract the month from the 'date' column using dt.month.",
+        "Output": "df['month'] = df['date'].dt.month"
+    },
+    {
+        "Input": "Write a python code to extract the month from the 'date' column using strftime('%m').",
+        "Output": "df['month'] = df['date'].apply(lambda x: x.strftime('%m'))"
+    },
+    {
+        "Input": "Write a python code to extract the month from the 'date' column using apply with month attribute.",
+        "Output": "df['month'] = df['date'].apply(lambda x: x.month)"
+    },
+    {
+        "Input": "Write a python code to extract the month from the 'date' column using pd.DatetimeIndex.month.",
+        "Output": "df['month'] = pd.DatetimeIndex(df['date']).month"
+    },
+    {
+        "Input": "Write a python code to extract the month from the 'date' column using split and str accessor.",
+        "Output": "df['month'] = df['date'].str.split('-').str[1]"
+    },
+    {
+        "Input": "Write a python code to extract the month from the 'date' column using pd.to_datetime and dt.month.",
+        "Output": "df['month'] = pd.to_datetime(df['date']).dt.month"
+    },
+    {
+        "Input": "Write a python code to extract the month from the 'date' column using map and strftime('%m').",
+        "Output": "df['month'] = df['date'].map(lambda x: x.strftime('%m'))"
+    },
+    {
+        "Input": "Write a python code to extract the month from the 'date' column using strptime and strftime('%m').",
+        "Output": "df['month'] = df['date'].apply(lambda x: datetime.strptime(x, '%Y-%m-%d').strftime('%m'))"
+    },
+    {
+        "Input": "Write a python code to extract the month from the 'date' column using lambda function and str accessor.",
+        "Output": "df['month'] = df['date'].apply(lambda x: x.split('-')[1])"
+    },
+    {
+        "Input": "Write a python code to extract the month from the 'date' column using map with lambda function and strftime('%m').",
+        "Output": "df['month'] = df['date'].map(lambda x: x.strftime('%m'))"
+    },
+    {
+        "Input": "Write a python code to extract the year from the 'date' column.",
+        "Output": "df['year'] = df['date'].dt.year"
+    },
+    {
+        "Input": "Write a python code to extract the year from the 'date' column using strftime.",
+        "Output": "df['year'] = df['date'].dt.strftime('%Y')"
+    },
+    {
+        "Input": "Write a python code to extract the year from the 'date' column using apply and lambda.",
+        "Output": "df['year'] = df['date'].apply(lambda x: x.year)"
+    },
+    {
+        "Input": "Write a python code to extract the year from the 'date' column using str accessor.",
+        "Output": "df['year'] = df['date'].str[:4].astype(int)"
+    },
+    {
+        "Input": "Write a python code to extract the year from the 'date' column using map.",
+        "Output": "df['year'] = df['date'].map(lambda x: x.year)"
+    },
+    {
+        "Input": "Write a python code to extract the year from the 'date' column using split.",
+        "Output": "df['year'] = df['date'].str.split('-').str[0].astype(int)"
+    },
+    {
+        "Input": "Write a python code to extract the year from the 'date' column using regex.",
+        "Output": "df['year'] = df['date'].str.extract(r'(\\d{4})').astype(int)"
+    },
+    {
+        "Input": "Write a python code to extract the year from the 'date' column using to_datetime and year.",
+        "Output": "df['year'] = pd.to_datetime(df['date']).dt.year"
+    },
+    {
+        "Input": "Write a python code to extract the year from the 'date' column using resample.",
+        "Output": "df['year'] = df.resample('Y')['date'].mean().index.year"
+    },
+    {
+        "Input": "Write a python code to extract the year from the 'date' column using dateutil parser.",
+        "Output": "df['year'] = df['date'].apply(lambda x: parse(x).year)"
+    },
+    {
+        "Input": "Write a python code to extract the day from the 'date' column using dt.day",
+        "Output": "df['day'] = df['date'].dt.day"
+    },
+    {
+        "Input": "Write a python code to extract the day from the 'date' column using .apply and lambda",
+        "Output": "df['day'] = df['date'].apply(lambda x: x.day)"
+    },
+    {
+        "Input": "Write a python code to extract the day from the 'date' column using .map",
+        "Output": "df['day'] = df['date'].map(lambda x: x.day)"
+    },
+    {
+        "Input": "Write a python code to extract the day from the 'date' column using .dt.strftime",
+        "Output": "df['day'] = df['date'].dt.strftime('%d').astype(int)"
+    },
+    {
+        "Input": "Write a python code to extract the day from the 'date' column using .dt.components.days",
+        "Output": "df['day'] = df['date'].dt.components.days"
+    },
+    {
+        "Input": "Write a python code to extract the day from the 'date' column using .dt.date",
+        "Output": "df['day'] = df['date'].dt.date.apply(lambda x: x.day)"
+    },
+    {
+        "Input": "Write a python code to extract the day from the 'date' column using .dt.to_period('D')",
+        "Output": "df['day'] = df['date'].dt.to_period('D').dt.day"
+    },
+    {
+        "Input": "Write a python code to extract the day from the 'date' column using .dt.to_pydatetime().day",
+        "Output": "df['day'] = df['date'].dt.to_pydatetime().day"
+    },
+    {
+        "Input": "Write a python code to extract the day from the 'date' column using .dt.dayofweek",
+        "Output": "df['day'] = df['date'].dt.dayofweek"
+    },
+    {
+        "Input": "Write a python code to extract the day from the 'date' column using .dt.day_name()",
+        "Output": "df['day'] = df['date'].dt.day_name()"
+    },
+    {
+        "Input": "Write a python code to get unique values in the 'city' column.",
+        "Output": "df['city'].unique()"
+    },
+    {
+        "Input": "Write a python code to fetch unique values in the 'city' column.",
+        "Output": "df['city'].drop_duplicates()"
+    },
+    {
+        "Input": "Write a python code to retrieve unique values from the 'city' column.",
+        "Output": "df['city'].value_counts().index.tolist()"
+    },
+    {
+        "Input": "Write a python code to obtain unique values from the 'city' column.",
+        "Output": "list(df['city'].unique())"
+    },
+    {
+        "Input": "Write a python code to extract unique values from the 'city' column.",
+        "Output": "pd.unique(df['city']).tolist()"
+    },
+    {
+        "Input": "Write a python code to list unique values in the 'city' column.",
+        "Output": "df['city'].drop_duplicates().tolist()"
+    },
+    {
+        "Input": "Write a python code to show unique values in the 'city' column.",
+        "Output": "df['city'].value_counts().keys().tolist()"
+    },
+    {
+        "Input": "Write a python code to display unique values from the 'city' column.",
+        "Output": "list(df['city'].unique())"
+    },
+    {
+        "Input": "Write a python code to print unique values from the 'city' column.",
+        "Output": "df['city'].unique().tolist()"
+    },
+    {
+        "Input": "Write a python code to find unique values in the 'city' column.",
+        "Output": "df['city'].drop_duplicates().values.tolist()"
+    },
+    {
+        "Input": "Write a python code to count unique values in the 'city' column using value_counts method.",
+        "Output": "df['city'].value_counts().count()"
+    },
+    {
+        "Input": "Write a python code to count unique values in the 'city' column using nunique method.",
+        "Output": "df['city'].nunique()"
+    },
+    {
+        "Input": "Write a python code to count unique values in the 'city' column using unique and len methods.",
+        "Output": "len(df['city'].unique())"
+    },
+    {
+        "Input": "Write a python code to count unique values in the 'city' column using groupby and count.",
+        "Output": "df.groupby('city').size().count()"
+    },
+    {
+        "Input": "Write a python code to count unique values in the 'city' column using set.",
+        "Output": "len(set(df['city']))"
+    },
+    {
+        "Input": "Write a python code to count unique values in the 'city' column using collections.Counter.",
+        "Output": "len(Counter(df['city']))"
+    },
+    {
+        "Input": "Write a python code to count unique values in the 'city' column using numpy unique.",
+        "Output": "np.unique(df['city']).size"
+    },
+    {
+        "Input": "Write a python code to count unique values in the 'city' column using pandas unique.",
+        "Output": "pd.unique(df['city']).size"
+    },
+    {
+        "Input": "Write a python code to count unique values in the 'city' column using pivot_table and len.",
+        "Output": "len(pd.pivot_table(df, index='city', aggfunc='size'))"
+    },
+    {
+        "Input": "Write a python code to count unique values in the 'city' column using value_counts and len.",
+        "Output": "len(df['city'].value_counts())"
+    },
+    {
+        "Input": "Write a python code to get the value counts of the 'status' column.",
+        "Output": "df['status'].value_counts()"
+    },
+    {
+        "Input": "Write a python code to count the occurrences of each value in the 'status' column.",
+        "Output": "df['status'].value_counts()"
+    },
+    {
+        "Input": "Write a python code to count the number of each unique value in the 'status' column.",
+        "Output": "df['status'].value_counts()"
+    },
+    {
+        "Input": "Write a python code to find the frequency of each value in the 'status' column.",
+        "Output": "df['status'].value_counts()"
+    },
+    {
+        "Input": "Write a python code to calculate how many times each value appears in the 'status' column.",
+        "Output": "df['status'].value_counts()"
+    },
+    {
+        "Input": "Write a python code to get a count of each unique value in the 'status' column.",
+        "Output": "df['status'].value_counts()"
+    },
+    {
+        "Input": "Write a python code to display the count of each value in the 'status' column.",
+        "Output": "df['status'].value_counts()"
+    },
+    {
+        "Input": "Write a python code to find the distribution of values in the 'status' column.",
+        "Output": "df['status'].value_counts()"
+    },
+    {
+        "Input": "Write a python code to retrieve the number of occurrences of each unique value in the 'status' column.",
+        "Output": "df['status'].value_counts()"
+    },
+    {
+        "Input": "Write a python code to get the frequency distribution of values in the 'status' column.",
+        "Output": "df['status'].value_counts()"
+    },
+    {
+        "Input": "Write a python code to normalize the 'sales' column using Min-Max scaling.",
+        "Output": "df['sales_normalized'] = (df['sales'] - df['sales'].min()) / (df['sales'].max() - df['sales'].min())"
+    },
+    {
+        "Input": "Write a python code to normalize the 'sales' column using z-score normalization.",
+        "Output": "df['sales_normalized'] = (df['sales'] - df['sales'].mean()) / df['sales'].std()"
+    },
+    {
+        "Input": "Write a python code to normalize the 'sales' column using sklearn MinMaxScaler.",
+        "Output": "from sklearn.preprocessing import MinMaxScaler\n\nscaler = MinMaxScaler()\ndf['sales_normalized'] = scaler.fit_transform(df[['sales']])"
+    },
+    {
+        "Input": "Write a python code to normalize the 'sales' column to a [0, 1] range.",
+        "Output": "df['sales_normalized'] = (df['sales'] - df['sales'].min()) / (df['sales'].max() - df['sales'].min())"
+    },
+    {
+        "Input": "Write a python code to normalize the 'sales' column using decimal scaling.",
+        "Output": "df['sales_normalized'] = df['sales'] / 10**len(str(df['sales'].max()))"
+    },
+    {
+        "Input": "Write a python code to normalize the 'sales' column using robust scaling.",
+        "Output": "from sklearn.preprocessing import RobustScaler\n\nscaler = RobustScaler()\ndf['sales_normalized'] = scaler.fit_transform(df[['sales']])"
+    },
+    {
+        "Input": "Write a python code to normalize the 'sales' column using logarithmic transformation.",
+        "Output": "import numpy as np\n\ndf['sales_normalized'] = np.log1p(df['sales'])"
+    },
+    {
+        "Input": "Write a python code to normalize the 'sales' column using square root transformation.",
+        "Output": "import numpy as np\n\ndf['sales_normalized'] = np.sqrt(df['sales'])"
+    },
+    {
+        "Input": "Write a python code to normalize the 'sales' column using softmax function.",
+        "Output": "import numpy as np\n\ndef softmax(x):\n    e_x = np.exp(x - np.max(x))\n    return e_x / e_x.sum(axis=0)\n\ndf['sales_normalized'] = softmax(df['sales'])"
+    },
+    {
+        "Input": "Write a python code to normalize the 'sales' column using unit vector normalization.",
+        "Output": "from sklearn.preprocessing import Normalizer\n\nscaler = Normalizer()\ndf['sales_normalized'] = scaler.fit_transform(df[['sales']])"
+    },
+    {
+        "Input": "Write a python code to replace values greater than 100 in 'column' with 100.",
+        "Output": "df.loc[df['column'] > 100, 'column'] = 100"
+    },
+    {
+        "Input": "Write a python code to replace values greater than 100 in 'column' with 100.",
+        "Output": "df['column'].where(df['column'] <= 100, 100, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to replace values greater than 100 in 'column' with 100.",
+        "Output": "df['column'] = np.where(df['column'] > 100, 100, df['column'])"
+    },
+    {
+        "Input": "Write a python code to replace values greater than 100 in 'column' with 100.",
+        "Output": "df['column'].clip(upper=100, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to replace values greater than 100 in 'column' with 100.",
+        "Output": "df['column'].mask(df['column'] > 100, 100, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to replace values greater than 100 in 'column' with 100.",
+        "Output": "df['column'] = [100 if x > 100 else x for x in df['column']]"
+    },
+    {
+        "Input": "Write a python code to replace values greater than 100 in 'column' with 100.",
+        "Output": "df['column'] = df.apply(lambda x: 100 if x['column'] > 100 else x['column'], axis=1)"
+    },
+    {
+        "Input": "Write a python code to replace values greater than 100 in 'column' with 100.",
+        "Output": "df['column'].apply(lambda x: 100 if x > 100 else x)"
+    },
+    {
+        "Input": "Write a python code to replace values greater than 100 in 'column' with 100.",
+        "Output": "df.loc[df['column'].gt(100), 'column'] = 100"
+    },
+    {
+        "Input": "Write a python code to replace values greater than 100 in 'column' with 100.",
+        "Output": "df['column'].replace(df[df['column'] > 100]['column'], 100, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to create a cumulative sum column for 'sales'.",
+        "Output": "df['cumulative_sales'] = df['sales'].cumsum()"
+    },
+    {
+        "Input": "Write a python code to create a cumulative sum column for 'sales' using a loop.",
+        "Output": "cumulative_sum = 0\nfor i in range(len(df)):\n    cumulative_sum += df.at[i, 'sales']\n    df.at[i, 'cumulative_sales'] = cumulative_sum"
+    },
+    {
+        "Input": "Write a python code to create a cumulative sum column for 'sales' using list comprehension.",
+        "Output": "df['cumulative_sales'] = [sum(df.iloc[0:i+1]['sales']) for i in range(len(df))]"
+    },
+    {
+        "Input": "Write a python code to create a cumulative sum column for 'sales' using numpy.",
+        "Output": "import numpy as np\n\ndf['cumulative_sales'] = np.cumsum(df['sales'])"
+    },
+    {
+        "Input": "Write a python code to create a cumulative sum column for 'sales' using apply and lambda function.",
+        "Output": "df['cumulative_sales'] = df['sales'].apply(lambda x: x if pd.isna(x) else df[df['sales'] < x]['sales'].sum())"
+    },
+    {
+        "Input": "Write a python code to create a cumulative sum column for 'sales' using groupby and cumsum.",
+        "Output": "df['cumulative_sales'] = df.groupby(level=0)['sales'].cumsum()"
+    },
+    {
+        "Input": "Write a python code to create a cumulative sum column for 'sales' using rolling and sum.",
+        "Output": "df['cumulative_sales'] = df['sales'].rolling(min_periods=1, window=len(df)).sum()"
+    },
+    {
+        "Input": "Write a python code to create a cumulative sum column for 'sales' using iterrows.",
+        "Output": "cumulative_sum = 0\nfor index, row in df.iterrows():\n    cumulative_sum += row['sales']\n    df.at[index, 'cumulative_sales'] = cumulative_sum"
+    },
+    {
+        "Input": "Write a python code to create a cumulative sum column for 'sales' using cumsum and reindex.",
+        "Output": "df['cumulative_sales'] = df['sales'].cumsum().reindex(df.index)"
+    },
+    {
+        "Input": "Write a python code to create a cumulative sum column for 'sales' using expanding.",
+        "Output": "df['cumulative_sales'] = df['sales'].expanding().sum()"
+    },
+    {
+        "Input": "Write a python code to display the dataframe's columns.",
+        "Output": "df.columns"
+    },
+    {
+        "Input": "Write a python code to list the column names of the dataframe.",
+        "Output": "df.columns.tolist()"
+    },
+    {
+        "Input": "Write a python code to show all columns in the dataframe.",
+        "Output": "print(df.columns)"
+    },
+    {
+        "Input": "Write a python code to get the dataframe's columns as an Index object.",
+        "Output": "df.columns"
+    },
+    {
+        "Input": "Write a python code to retrieve the dataframe's column names.",
+        "Output": "list(df.columns)"
+    },
+    {
+        "Input": "Write a python code to access the dataframe's column names attribute.",
+        "Output": "df.columns"
+    },
+    {
+        "Input": "Write a python code to print the dataframe's columns.",
+        "Output": "print(df.columns.tolist())"
+    },
+    {
+        "Input": "Write a python code to fetch the dataframe's columns as a list.",
+        "Output": "df.columns.to_list()"
+    },
+    {
+        "Input": "Write a python code to extract the dataframe's columns.",
+        "Output": "df.columns.values"
+    },
+    {
+        "Input": "Write a python code to list column names in the dataframe.",
+        "Output": "list(df)"
+    },
+    {
+        "Input": "Write a python code to create a pivot table with 'sales' as values and 'month' as index.",
+        "Output": "pd.pivot_table(df, values='sales', index='month')"
+    },
+    {
+        "Input": "Write a python code to pivot table with 'sales' as values and 'month' as index.",
+        "Output": "df.pivot_table(values='sales', index='month')"
+    },
+    {
+        "Input": "Write a python code to create pivot table with 'month' index and 'sales' values.",
+        "Output": "df.pivot_table(index='month', values='sales')"
+    },
+    {
+        "Input": "Write a python code to generate a pivot table for 'sales' by 'month'.",
+        "Output": "pd.pivot_table(df, index='month', values='sales')"
+    },
+    {
+        "Input": "Write a python code to make a pivot table for 'sales' as values with 'month' index.",
+        "Output": "df.pivot_table(index='month', values='sales')"
+    },
+    {
+        "Input": "Write a python code to build pivot table with 'sales' as values and 'month' as index.",
+        "Output": "df.pivot_table(values='sales', index='month')"
+    },
+    {
+        "Input": "Write a python code to create a dataframe pivot table using 'month' and 'sales'.",
+        "Output": "pd.pivot_table(df, values='sales', index='month')"
+    },
+    {
+        "Input": "Write a python code to construct a pivot table with 'month' as index and 'sales' as values.",
+        "Output": "pd.pivot_table(df, values='sales', index='month')"
+    },
+    {
+        "Input": "Write a python code to create a pivot table for the dataframe with 'month' index and 'sales' values.",
+        "Output": "pd.pivot_table(df, values='sales', index='month')"
+    },
+    {
+        "Input": "Write a python code to generate pivot table with 'sales' as values by 'month'.",
+        "Output": "pd.pivot_table(df, values='sales', index='month')"
+    },
+    {
+        "Input": "Write a python code to reshape the dataframe from wide to long format.",
+        "Output": "pd.melt(df)"
+    },
+    {
+        "Input": "Write a python code to transform dataframe from wide to long format.",
+        "Output": "pd.melt(df)"
+    },
+    {
+        "Input": "Write a python code to convert the dataframe from wide to long format.",
+        "Output": "df.melt()"
+    },
+    {
+        "Input": "Write a python code to change dataframe from wide to long format.",
+        "Output": "pd.melt(df)"
+    },
+    {
+        "Input": "Write a python code to melt the dataframe into long format.",
+        "Output": "pd.melt(df)"
+    },
+    {
+        "Input": "Write a python code to reshape the dataframe using melt.",
+        "Output": "df.melt()"
+    },
+    {
+        "Input": "Write a python code to melt the dataframe from wide to long.",
+        "Output": "pd.melt(df)"
+    },
+    {
+        "Input": "Write a python code to transform wide dataframe to long format using melt.",
+        "Output": "df.melt()"
+    },
+    {
+        "Input": "Write a python code to use melt to reshape dataframe to long format.",
+        "Output": "pd.melt(df)"
+    },
+    {
+        "Input": "Write a python code to reshape the dataframe using pd.melt.",
+        "Output": "pd.melt(df)"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 on column 'id'.",
+        "Output": "df1.merge(df2, on='id')"
+    },
+    {
+        "Input": "Write a python code to merge dataframes df1 and df2 using 'id' column.",
+        "Output": "pd.merge(df1, df2, on='id')"
+    },
+    {
+        "Input": "Write a python code to join two dataframes df1 and df2 on 'id' column.",
+        "Output": "df1.join(df2.set_index('id'), on='id')"
+    },
+    {
+        "Input": "Write a python code to combine dataframes df1 and df2 on 'id'.",
+        "Output": "df1.merge(df2, how='inner', on='id')"
+    },
+    {
+        "Input": "Write a python code to inner join dataframes df1 and df2 on 'id'.",
+        "Output": "df1.merge(df2, on='id', how='inner')"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes on 'id'.",
+        "Output": "pd.merge(df1, df2, how='inner', on='id')"
+    },
+    {
+        "Input": "Write a python code to perform an inner merge on dataframes df1 and df2 using 'id'.",
+        "Output": "df1.merge(df2, on='id')"
+    },
+    {
+        "Input": "Write a python code to merge df1 and df2 dataframes on column 'id'.",
+        "Output": "pd.merge(df1, df2, on='id')"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 on 'id' column.",
+        "Output": "df1.merge(df2, on='id')"
+    },
+    {
+        "Input": "Write a python code to join dataframes df1 and df2 on 'id'.",
+        "Output": "pd.merge(df1, df2, on='id')"
+    },
+    {
+        "Input": "Write a python code to create dummy variables for a column 'category'.",
+        "Output": "pd.get_dummies(df['category'])"
+    },
+    {
+        "Input": "Write a python code to generate dummy variables for 'category' column.",
+        "Output": "pd.get_dummies(df['category'])"
+    },
+    {
+        "Input": "Write a python code to convert 'category' column to dummy variables.",
+        "Output": "pd.get_dummies(df['category'])"
+    },
+    {
+        "Input": "Write a python code to create one-hot encoding for 'category' column.",
+        "Output": "pd.get_dummies(df['category'])"
+    },
+    {
+        "Input": "Write a python code to create dummies for 'category' column.",
+        "Output": "pd.get_dummies(df, columns=['category'])"
+    },
+    {
+        "Input": "Write a python code to make dummy variables for 'category' column.",
+        "Output": "pd.get_dummies(df['category'])"
+    },
+    {
+        "Input": "Write a python code to create indicator variables for 'category' column.",
+        "Output": "pd.get_dummies(df['category'])"
+    },
+    {
+        "Input": "Write a python code to create binary variables for 'category' column.",
+        "Output": "pd.get_dummies(df['category'])"
+    },
+    {
+        "Input": "Write a python code to create one-hot encoding for dataframe column 'category'.",
+        "Output": "pd.get_dummies(df, columns=['category'])"
+    },
+    {
+        "Input": "Write a python code to generate dummy/indicator variables for 'category' column.",
+        "Output": "pd.get_dummies(df['category'])"
+    },
+    {
+        "Input": "Write a python code to factorize the 'category' column.",
+        "Output": "df['category'] = pd.factorize(df['category'])[0]"
+    },
+    {
+        "Input": "Create a script to encode the 'category' column as factors.",
+        "Output": "df['category'] = pd.factorize(df['category'])[0]"
+    },
+    {
+        "Input": "How to transform 'category' column into numerical codes?",
+        "Output": "df['category'] = pd.factorize(df['category'])[0]"
+    },
+    {
+        "Input": "Generate factor codes for 'category' column in Python.",
+        "Output": "df['category'] = pd.factorize(df['category'])[0]"
+    },
+    {
+        "Input": "Python code for converting 'category' column to numerical values.",
+        "Output": "df['category'] = pd.factorize(df['category'])[0]"
+    },
+    {
+        "Input": "Transform 'category' column into numbers using pandas.",
+        "Output": "df['category'] = pd.factorize(df['category'])[0]"
+    },
+    {
+        "Input": "Convert 'category' column into integers using pandas.",
+        "Output": "df['category'] = pd.factorize(df['category'])[0]"
+    },
+    {
+        "Input": "Python command to factorize 'category' column.",
+        "Output": "df['category'] = pd.factorize(df['category'])[0]"
+    },
+    {
+        "Input": "Write code to encode 'category' column as integers.",
+        "Output": "df['category'] = pd.factorize(df['category'])[0]"
+    },
+    {
+        "Input": "Factorize 'category' column in a dataframe.",
+        "Output": "df['category'] = pd.factorize(df['category'])[0]"
+    },
+    {
+        "Input": "How to factorize a dataframe column named 'category'?",
+        "Output": "df['category'] = pd.factorize(df['category'])[0]"
+    },
+    {
+        "Input": "Write a python code to check if there are any null values in the dataframe.",
+        "Output": "df.isnull().any()"
+    },
+    {
+        "Input": "Check for null values in a pandas dataframe.",
+        "Output": "df.isnull().any()"
+    },
+    {
+        "Input": "Python code to find any nulls in a dataframe.",
+        "Output": "df.isnull().any()"
+    },
+    {
+        "Input": "How to check for NaNs in a dataframe?",
+        "Output": "df.isnull().any()"
+    },
+    {
+        "Input": "Detect if there are any missing values in the dataframe.",
+        "Output": "df.isnull().any()"
+    },
+    {
+        "Input": "How to identify null values in pandas dataframe?",
+        "Output": "df.isnull().any()"
+    },
+    {
+        "Input": "Check if dataframe has any NaN values.",
+        "Output": "df.isnull().any()"
+    },
+    {
+        "Input": "Find null entries in a dataframe using Python.",
+        "Output": "df.isnull().any()"
+    },
+    {
+        "Input": "Write a code to check for nulls in dataframe columns.",
+        "Output": "df.isnull().any()"
+    },
+    {
+        "Input": "How to check dataframe columns for nulls?",
+        "Output": "df.isnull().any()"
+    },
+    {
+        "Input": "Code to verify null values in pandas dataframe.",
+        "Output": "df.isnull().any()"
+    },
+    {
+        "Input": "Write a python code to convert a column 'price' to numeric.",
+        "Output": "df['price'] = pd.to_numeric(df['price'])"
+    },
+    {
+        "Input": "Convert 'price' column to numeric type in pandas.",
+        "Output": "df['price'] = pd.to_numeric(df['price'])"
+    },
+    {
+        "Input": "Python code to ensure 'price' column is numeric.",
+        "Output": "df['price'] = pd.to_numeric(df['price'])"
+    },
+    {
+        "Input": "How to change 'price' column to numeric in a dataframe?",
+        "Output": "df['price'] = pd.to_numeric(df['price'])"
+    },
+    {
+        "Input": "Transform 'price' column into numerical format using pandas.",
+        "Output": "df['price'] = pd.to_numeric(df['price'])"
+    },
+    {
+        "Input": "Code to convert 'price' column to numbers.",
+        "Output": "df['price'] = pd.to_numeric(df['price'])"
+    },
+    {
+        "Input": "Change 'price' column to numeric type in dataframe.",
+        "Output": "df['price'] = pd.to_numeric(df['price'])"
+    },
+    {
+        "Input": "Convert 'price' column in pandas to numeric type.",
+        "Output": "df['price'] = pd.to_numeric(df['price'])"
+    },
+    {
+        "Input": "How to convert 'price' column values to numeric?",
+        "Output": "df['price'] = pd.to_numeric(df['price'])"
+    },
+    {
+        "Input": "Ensure 'price' column in dataframe is numeric.",
+        "Output": "df['price'] = pd.to_numeric(df['price'])"
+    },
+    {
+        "Input": "Python script to convert 'price' column to numeric.",
+        "Output": "df['price'] = pd.to_numeric(df['price'])"
+    },
+    {
+        "Input": "Write a python code to convert a column 'time' to timedelta.",
+        "Output": "df['time'] = pd.to_timedelta(df['time'])"
+    },
+    {
+        "Input": "Convert 'time' column to timedelta format in pandas.",
+        "Output": "df['time'] = pd.to_timedelta(df['time'])"
+    },
+    {
+        "Input": "Python code to change 'time' column to timedelta.",
+        "Output": "df['time'] = pd.to_timedelta(df['time'])"
+    },
+    {
+        "Input": "How to convert 'time' column to timedelta in dataframe?",
+        "Output": "df['time'] = pd.to_timedelta(df['time'])"
+    },
+    {
+        "Input": "Transform 'time' column into timedelta using pandas.",
+        "Output": "df['time'] = pd.to_timedelta(df['time'])"
+    },
+    {
+        "Input": "Code to convert 'time' column to timedelta.",
+        "Output": "df['time'] = pd.to_timedelta(df['time'])"
+    },
+    {
+        "Input": "Change 'time' column to timedelta type in dataframe.",
+        "Output": "df['time'] = pd.to_timedelta(df['time'])"
+    },
+    {
+        "Input": "Convert 'time' column in pandas to timedelta.",
+        "Output": "df['time'] = pd.to_timedelta(df['time'])"
+    },
+    {
+        "Input": "How to change 'time' column values to timedelta?",
+        "Output": "df['time'] = pd.to_timedelta(df['time'])"
+    },
+    {
+        "Input": "Ensure 'time' column in dataframe is timedelta.",
+        "Output": "df['time'] = pd.to_timedelta(df['time'])"
+    },
+    {
+        "Input": "Python script to convert 'time' column to timedelta.",
+        "Output": "df['time'] = pd.to_timedelta(df['time'])"
+    },
+    {
+        "Input": "Write a python code to evaluate an expression using 'eval'.",
+        "Output": "df.eval('total = price * quantity')"
+    },
+    {
+        "Input": "Use 'eval' to compute an expression in dataframe.",
+        "Output": "df.eval('total = price * quantity')"
+    },
+    {
+        "Input": "Python code to evaluate 'price * quantity' using 'eval'.",
+        "Output": "df.eval('total = price * quantity')"
+    },
+    {
+        "Input": "How to evaluate 'total = price * quantity' with 'eval'?",
+        "Output": "df.eval('total = price * quantity')"
+    },
+    {
+        "Input": "Compute 'total = price * quantity' in pandas using 'eval'.",
+        "Output": "df.eval('total = price * quantity')"
+    },
+    {
+        "Input": "Evaluate expression 'total = price * quantity' using 'eval'.",
+        "Output": "df.eval('total = price * quantity')"
+    },
+    {
+        "Input": "How to use 'eval' for 'total = price * quantity'?",
+        "Output": "df.eval('total = price * quantity')"
+    },
+    {
+        "Input": "Calculate 'total = price * quantity' using 'eval' function.",
+        "Output": "df.eval('total = price * quantity')"
+    },
+    {
+        "Input": "Use eval to calculate total price from price and quantity.",
+        "Output": "df.eval('total = price * quantity')"
+    },
+    {
+        "Input": "Python eval expression to compute 'total' column.",
+        "Output": "df.eval('total = price * quantity')"
+    },
+    {
+        "Input": "Write a python code to select columns of type 'int'.",
+        "Output": "df.select_dtypes(include='int')"
+    },
+    {
+        "Input": "How do you select columns of integer type in a dataframe using python?",
+        "Output": "df.select_dtypes(include='int')"
+    },
+    {
+        "Input": "Provide a python code to filter columns of type integer.",
+        "Output": "df.select_dtypes(include='int')"
+    },
+    {
+        "Input": "Write a code snippet to choose columns of dtype int in pandas.",
+        "Output": "df.select_dtypes(include='int')"
+    },
+    {
+        "Input": "Show me how to select columns with int data type in a dataframe.",
+        "Output": "df.select_dtypes(include='int')"
+    },
+    {
+        "Input": "What is the python code to select integer columns in pandas?",
+        "Output": "df.select_dtypes(include='int')"
+    },
+    {
+        "Input": "How can I select all columns with data type int in pandas?",
+        "Output": "df.select_dtypes(include='int')"
+    },
+    {
+        "Input": "Write a pandas code to filter columns with dtype integer.",
+        "Output": "df.select_dtypes(include='int')"
+    },
+    {
+        "Input": "Give me a code to get all integer columns in a pandas dataframe.",
+        "Output": "df.select_dtypes(include='int')"
+    },
+    {
+        "Input": "What code would you use to select integer type columns in pandas?",
+        "Output": "df.select_dtypes(include='int')"
+    },
+    {
+        "Input": "How to select columns of int type in a dataframe in python?",
+        "Output": "df.select_dtypes(include='int')"
+    },
+    {
+        "Input": "Write a python code to convert all columns to the best possible datatypes.",
+        "Output": "df = df.convert_dtypes()"
+    },
+    {
+        "Input": "How do you convert all columns to optimal datatypes in pandas?",
+        "Output": "df = df.convert_dtypes()"
+    },
+    {
+        "Input": "Provide a code to convert all columns to their best possible datatypes.",
+        "Output": "df = df.convert_dtypes()"
+    },
+    {
+        "Input": "Write a code snippet to convert dataframe columns to best dtypes.",
+        "Output": "df = df.convert_dtypes()"
+    },
+    {
+        "Input": "Show me how to convert all dataframe columns to optimal datatypes.",
+        "Output": "df = df.convert_dtypes()"
+    },
+    {
+        "Input": "What is the python code to convert all columns to the most suitable datatypes?",
+        "Output": "df = df.convert_dtypes()"
+    },
+    {
+        "Input": "How can I convert all columns to the best data types in pandas?",
+        "Output": "df = df.convert_dtypes()"
+    },
+    {
+        "Input": "Write a pandas code to convert columns to their optimal datatypes.",
+        "Output": "df = df.convert_dtypes()"
+    },
+    {
+        "Input": "Give me a code to convert all dataframe columns to best possible dtypes.",
+        "Output": "df = df.convert_dtypes()"
+    },
+    {
+        "Input": "What code would you use to convert all columns to their best possible datatypes in pandas?",
+        "Output": "df = df.convert_dtypes()"
+    },
+    {
+        "Input": "How to convert all columns to the best possible datatypes in python?",
+        "Output": "df = df.convert_dtypes()"
+    },
+    {
+        "Input": "Write a python code to select rows where 'age' is greater than 30.",
+        "Output": "df.loc[df['age'] > 30]"
+    },
+    {
+        "Input": "How do you select rows where the 'age' column is greater than 30 in pandas?",
+        "Output": "df.loc[df['age'] > 30]"
+    },
+    {
+        "Input": "Provide a code to filter rows where age is over 30.",
+        "Output": "df.loc[df['age'] > 30]"
+    },
+    {
+        "Input": "Write a code snippet to select rows with age more than 30.",
+        "Output": "df.loc[df['age'] > 30]"
+    },
+    {
+        "Input": "Show me how to filter rows where 'age' exceeds 30.",
+        "Output": "df.loc[df['age'] > 30]"
+    },
+    {
+        "Input": "What is the python code to select rows where age is above 30?",
+        "Output": "df.loc[df['age'] > 30]"
+    },
+    {
+        "Input": "How can I filter rows where the 'age' column is greater than 30 in pandas?",
+        "Output": "df.loc[df['age'] > 30]"
+    },
+    {
+        "Input": "Write a pandas code to select rows with 'age' greater than 30.",
+        "Output": "df.loc[df['age'] > 30]"
+    },
+    {
+        "Input": "Give me a code to filter rows where age column is more than 30.",
+        "Output": "df.loc[df['age'] > 30]"
+    },
+    {
+        "Input": "What code would you use to select rows with age greater than 30 in pandas?",
+        "Output": "df.loc[df['age'] > 30]"
+    },
+    {
+        "Input": "How to select rows where 'age' is greater than 30 in a dataframe?",
+        "Output": "df.loc[df['age'] > 30]"
+    },
+    {
+        "Input": "Write a python code to select rows by position (first 10 rows).",
+        "Output": "df.iloc[:10]"
+    },
+    {
+        "Input": "How do you select the first 10 rows by position in a dataframe using python?",
+        "Output": "df.iloc[:10]"
+    },
+    {
+        "Input": "Provide a code to select the first 10 rows of a dataframe by position.",
+        "Output": "df.iloc[:10]"
+    },
+    {
+        "Input": "Write a code snippet to get the first 10 rows of a dataframe.",
+        "Output": "df.iloc[:10]"
+    },
+    {
+        "Input": "Show me how to select the top 10 rows by position in pandas.",
+        "Output": "df.iloc[:10]"
+    },
+    {
+        "Input": "What is the python code to select the first 10 rows of a dataframe?",
+        "Output": "df.iloc[:10]"
+    },
+    {
+        "Input": "How can I get the first 10 rows by position in pandas?",
+        "Output": "df.iloc[:10]"
+    },
+    {
+        "Input": "Write a pandas code to select the first 10 rows by position.",
+        "Output": "df.iloc[:10]"
+    },
+    {
+        "Input": "Give me a code to get the first 10 rows in a dataframe by position.",
+        "Output": "df.iloc[:10]"
+    },
+    {
+        "Input": "What code would you use to select the first 10 rows in pandas?",
+        "Output": "df.iloc[:10]"
+    },
+    {
+        "Input": "How to select the first 10 rows by position in a dataframe using python?",
+        "Output": "df.iloc[:10]"
+    },
+    {
+        "Input": "Write a python code to remove a column 'name' and return it.",
+        "Output": "name = df.pop('name')"
+    },
+    {
+        "Input": "How do you remove a column 'name' and get its values in pandas?",
+        "Output": "name = df.pop('name')"
+    },
+    {
+        "Input": "Provide a code to remove the column 'name' and return its values.",
+        "Output": "name = df.pop('name')"
+    },
+    {
+        "Input": "Write a code snippet to drop the 'name' column and return it.",
+        "Output": "name = df.pop('name')"
+    },
+    {
+        "Input": "Show me how to remove and return the 'name' column in pandas.",
+        "Output": "name = df.pop('name')"
+    },
+    {
+        "Input": "What is the python code to drop the 'name' column and return it?",
+        "Output": "name = df.pop('name')"
+    },
+    {
+        "Input": "How can I remove the 'name' column and get its values in pandas?",
+        "Output": "name = df.pop('name')"
+    },
+    {
+        "Input": "Write a pandas code to drop and return the 'name' column.",
+        "Output": "name = df.pop('name')"
+    },
+    {
+        "Input": "Give me a code to remove and return the 'name' column in a dataframe.",
+        "Output": "name = df.pop('name')"
+    },
+    {
+        "Input": "What code would you use to drop the 'name' column and return it in pandas?",
+        "Output": "name = df.pop('name')"
+    },
+    {
+        "Input": "How to remove a column 'name' and return its values in python?",
+        "Output": "name = df.pop('name')"
+    },
+    {
+        "Input": "Write a python code to filter rows where 'city' is in a list of cities.",
+        "Output": "df[df['city'].isin(['New York', 'Los Angeles'])]"
+    },
+    {
+        "Input": "Write a python code to filter rows based on a list of cities in column 'city'.",
+        "Output": "df[df['city'].isin(['New York', 'Los Angeles'])]"
+    },
+    {
+        "Input": "Write a python code to filter rows where 'city' matches any city in a given list.",
+        "Output": "df[df['city'].isin(['New York', 'Los Angeles'])]"
+    },
+    {
+        "Input": "Write a python code to select rows where 'city' is in a specified list of cities.",
+        "Output": "df[df['city'].isin(['New York', 'Los Angeles'])]"
+    },
+    {
+        "Input": "Write a python code to extract rows for cities included in a predefined list.",
+        "Output": "df[df['city'].isin(['New York', 'Los Angeles'])]"
+    },
+    {
+        "Input": "Write a python code to filter rows where 'city' is among certain cities.",
+        "Output": "df[df['city'].isin(['New York', 'Los Angeles'])]"
+    },
+    {
+        "Input": "Write a python code to filter dataframe rows based on specified cities in 'city'.",
+        "Output": "df[df['city'].isin(['New York', 'Los Angeles'])]"
+    },
+    {
+        "Input": "Write a python code to select rows where 'city' belongs to a list of cities.",
+        "Output": "df[df['city'].isin(['New York', 'Los Angeles'])]"
+    },
+    {
+        "Input": "Write a python code to add two columns 'price' and 'tax' and store the result in 'total'.",
+        "Output": "df['total'] = df['price'] + df['tax']"
+    },
+    {
+        "Input": "Write a python code to calculate the sum of 'price' and 'tax' and assign it to 'total'.",
+        "Output": "df['total'] = df['price'] + df['tax']"
+    },
+    {
+        "Input": "Write a python code to sum 'price' and 'tax' and save the result in 'total'.",
+        "Output": "df['total'] = df['price'] + df['tax']"
+    },
+    {
+        "Input": "Write a python code to compute 'price' plus 'tax' and store it in 'total'.",
+        "Output": "df['total'] = df['price'] + df['tax']"
+    },
+    {
+        "Input": "Write a python code to combine two dataframes df1 and df2 using a custom function.",
+        "Output": "df = df1.combine(df2, lambda s1, s2: s1.fillna(s2))"
+    },
+    {
+        "Input": "Write a python code to merge df1 and df2 using a custom function to fill missing values.",
+        "Output": "df = df1.combine(df2, lambda s1, s2: s1.fillna(s2))"
+    },
+    {
+        "Input": "Write a python code to merge two dataframes df1 and df2 and fill missing values using a custom function.",
+        "Output": "df = df1.combine(df2, lambda s1, s2: s1.fillna(s2))"
+    },
+    {
+        "Input": "Write a python code to combine two dataframes df1 and df2 by applying a custom function.",
+        "Output": "df = df1.combine(df2, lambda s1, s2: s1.fillna(s2))"
+    },
+    {
+        "Input": "Write a python code to apply a function to a column 'price'.",
+        "Output": "df['price'] = df['price'].apply(lambda x: x * 1.1)"
+    },
+    {
+        "Input": "Write a python code to scale values in the 'price' column by a factor of 1.1.",
+        "Output": "df['price'] = df['price'].apply(lambda x: x * 1.1)"
+    },
+    {
+        "Input": "Write a python code to multiply all values in the 'price' column by 1.1.",
+        "Output": "df['price'] = df['price'].apply(lambda x: x * 1.1)"
+    },
+    {
+        "Input": "Write a python code to map values in 'category' column using a dictionary.",
+        "Output": "df['category'] = df['category'].map({'A': 1, 'B': 2})"
+    },
+    {
+        "Input": "Write a python code to convert 'category' column values using a dictionary mapping.",
+        "Output": "df['category'] = df['category'].map({'A': 1, 'B': 2})"
+    },
+    {
+        "Input": "Write a python code to transform 'category' column values using a dictionary mapping.",
+        "Output": "df['category'] = df['category'].map({'A': 1, 'B': 2})"
+    },
+    {
+        "Input": "Write a python code to aggregate the 'sales' column by 'month'.",
+        "Output": "df.groupby('month')['sales'].aggregate('sum')"
+    },
+    {
+        "Input": "How do you aggregate the 'sales' column by 'month' in pandas?",
+        "Output": "df.groupby('month')['sales'].aggregate('sum')"
+    },
+    {
+        "Input": "Provide a code to sum the 'sales' column by 'month'.",
+        "Output": "df.groupby('month')['sales'].aggregate('sum')"
+    },
+    {
+        "Input": "Write a code snippet to calculate total 'sales' by 'month'.",
+        "Output": "df.groupby('month')['sales'].aggregate('sum')"
+    },
+    {
+        "Input": "Show me how to aggregate 'sales' by 'month' in pandas.",
+        "Output": "df.groupby('month')['sales'].aggregate('sum')"
+    },
+    {
+        "Input": "What is the python code to aggregate 'sales' by 'month'?",
+        "Output": "df.groupby('month')['sales'].aggregate('sum')"
+    },
+    {
+        "Input": "How can I sum 'sales' by 'month' in pandas?",
+        "Output": "df.groupby('month')['sales'].aggregate('sum')"
+    },
+    {
+        "Input": "Write a pandas code to aggregate the 'sales' column by 'month'.",
+        "Output": "df.groupby('month')['sales'].aggregate('sum')"
+    },
+    {
+        "Input": "Give me a code to calculate 'sales' by 'month' in pandas.",
+        "Output": "df.groupby('month')['sales'].aggregate('sum')"
+    },
+    {
+        "Input": "What code would you use to aggregate 'sales' by 'month' in pandas?",
+        "Output": "df.groupby('month')['sales'].aggregate('sum')"
+    },
+    {
+        "Input": "Write a python code to transform the 'sales' column by subtracting the mean.",
+        "Output": "df['sales'] = df['sales'].transform(lambda x: x - x.mean())"
+    },
+    {
+        "Input": "How do you transform the 'sales' column by subtracting the mean in pandas?",
+        "Output": "df['sales'] = df['sales'].transform(lambda x: x - x.mean())"
+    },
+    {
+        "Input": "Provide a code to subtract the mean from the 'sales' column.",
+        "Output": "df['sales'] = df['sales'].transform(lambda x: x - x.mean())"
+    },
+    {
+        "Input": "Write a code snippet to adjust 'sales' by subtracting its mean.",
+        "Output": "df['sales'] = df['sales'].transform(lambda x: x - x.mean())"
+    },
+    {
+        "Input": "Show me how to transform 'sales' by subtracting its mean in pandas.",
+        "Output": "df['sales'] = df['sales'].transform(lambda x: x - x.mean())"
+    },
+    {
+        "Input": "What is the python code to subtract the mean from the 'sales' column?",
+        "Output": "df['sales'] = df['sales'].transform(lambda x: x - x.mean())"
+    },
+    {
+        "Input": "How can I adjust 'sales' by subtracting its mean in pandas?",
+        "Output": "df['sales'] = df['sales'].transform(lambda x: x - x.mean())"
+    },
+    {
+        "Input": "Write a pandas code to transform the 'sales' column by subtracting the mean.",
+        "Output": "df['sales'] = df['sales'].transform(lambda x: x - x.mean())"
+    },
+    {
+        "Input": "Give me a code to subtract the mean from the 'sales' column in pandas.",
+        "Output": "df['sales'] = df['sales'].transform(lambda x: x - x.mean())"
+    },
+    {
+        "Input": "What code would you use to adjust 'sales' by subtracting its mean in pandas?",
+        "Output": "df['sales'] = df['sales'].transform(lambda x: x - x.mean())"
+    },
+    {
+        "Input": "Write a python code to assign a new column 'discount' with a value of 0.1.",
+        "Output": "df = df.assign(discount=0.1)"
+    },
+    {
+        "Input": "How do you assign a new column 'discount' with a value of 0.1 in pandas?",
+        "Output": "df = df.assign(discount=0.1)"
+    },
+    {
+        "Input": "Provide a code to create a new column 'discount' with value 0.1.",
+        "Output": "df = df.assign(discount=0.1)"
+    },
+    {
+        "Input": "Write a code snippet to add a new column 'discount' with a value of 0.1.",
+        "Output": "df = df.assign(discount=0.1)"
+    },
+    {
+        "Input": "Show me how to assign a new column 'discount' with a value of 0.1 in pandas.",
+        "Output": "df = df.assign(discount=0.1)"
+    },
+    {
+        "Input": "What is the python code to create a new column 'discount' with value 0.1?",
+        "Output": "df = df.assign(discount=0.1)"
+    },
+    {
+        "Input": "How can I add a new column 'discount' with value 0.1 in pandas?",
+        "Output": "df = df.assign(discount=0.1)"
+    },
+    {
+        "Input": "Write a pandas code to assign a new column 'discount' with a value of 0.1.",
+        "Output": "df = df.assign(discount=0.1)"
+    },
+    {
+        "Input": "Give me a code to create a new column 'discount' with value 0.1 in pandas.",
+        "Output": "df = df.assign(discount=0.1)"
+    },
+    {
+        "Input": "What code would you use to add a new column 'discount' with value 0.1 in pandas?",
+        "Output": "df = df.assign(discount=0.1)"
+    },
+    {
+        "Input": "Write a python code to explode a list column 'tags' into separate rows.",
+        "Output": "df = df.explode('tags')"
+    },
+    {
+        "Input": "How do you explode a list column 'tags' into separate rows in pandas?",
+        "Output": "df = df.explode('tags')"
+    },
+    {
+        "Input": "Provide a code to expand a list column 'tags' into individual rows.",
+        "Output": "df = df.explode('tags')"
+    },
+    {
+        "Input": "Write a code snippet to split a list column 'tags' into separate rows.",
+        "Output": "df = df.explode('tags')"
+    },
+    {
+        "Input": "Show me how to explode the column 'tags' into separate rows in pandas.",
+        "Output": "df = df.explode('tags')"
+    },
+    {
+        "Input": "What is the python code to expand a list column 'tags' into separate rows?",
+        "Output": "df = df.explode('tags')"
+    },
+    {
+        "Input": "How can I explode the list column 'tags' into separate rows in pandas?",
+        "Output": "df = df.explode('tags')"
+    },
+    {
+        "Input": "Write a pandas code to split a list column 'tags' into separate rows.",
+        "Output": "df = df.explode('tags')"
+    },
+    {
+        "Input": "Give me a code to explode the 'tags' column into separate rows in pandas.",
+        "Output": "df = df.explode('tags')"
+    },
+    {
+        "Input": "What code would you use to expand the 'tags' column into separate rows in pandas?",
+        "Output": "df = df.explode('tags')"
+    },
+    {
+        "Input": "Write a python code to sort the dataframe by 'price'.",
+        "Output": "df.sort_values(by='price', inplace=True)"
+    },
+    {
+        "Input": "How do you sort the dataframe by 'price' in pandas?",
+        "Output": "df.sort_values(by='price', inplace=True)"
+    },
+    {
+        "Input": "Provide a code to order the dataframe by 'price'.",
+        "Output": "df.sort_values(by='price', inplace=True)"
+    },
+    {
+        "Input": "Write a code snippet to sort the dataframe based on 'price'.",
+        "Output": "df.sort_values(by='price', inplace=True)"
+    },
+    {
+        "Input": "Show me how to sort the dataframe by 'price' in pandas.",
+        "Output": "df.sort_values(by='price', inplace=True)"
+    },
+    {
+        "Input": "What is the python code to order the dataframe by 'price'?",
+        "Output": "df.sort_values(by='price', inplace=True)"
+    },
+    {
+        "Input": "How can I sort the dataframe by 'price' in pandas?",
+        "Output": "df.sort_values(by='price', inplace=True)"
+    },
+    {
+        "Input": "Write a python code to replace values in 'category' column.",
+        "Output": "df['category'].replace({'A': 'Alpha', 'B': 'Beta'}, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to update 'category' column values with replacements.",
+        "Output": "df['category'].replace({'A': 'Alpha', 'B': 'Beta'}, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to substitute values in 'category' column.",
+        "Output": "df['category'].replace({'A': 'Alpha', 'B': 'Beta'}, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to change values in 'category' column.",
+        "Output": "df['category'].replace({'A': 'Alpha', 'B': 'Beta'}, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to swap values in 'category' column.",
+        "Output": "df['category'].replace({'A': 'Alpha', 'B': 'Beta'}, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to forward fill missing values in the dataframe.",
+        "Output": "df.ffill(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to fill forward missing values in the dataframe.",
+        "Output": "df.ffill(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to propagate non-null values forward in the dataframe.",
+        "Output": "df.ffill(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to carry forward values in the dataframe.",
+        "Output": "df.ffill(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to fill missing values by carrying forward in the dataframe.",
+        "Output": "df.ffill(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to interpolate missing values in the dataframe.",
+        "Output": "df.interpolate(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to fill in missing values by interpolation in the dataframe.",
+        "Output": "df.interpolate(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to interpolate NaN values in the dataframe.",
+        "Output": "df.interpolate(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to estimate missing values in the dataframe using interpolation.",
+        "Output": "df.interpolate(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to fill missing values with 0.",
+        "Output": "df.fillna(0, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to replace NaN values with 0 in the dataframe.",
+        "Output": "df.fillna(0, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to substitute missing values with 0 in the dataframe.",
+        "Output": "df.fillna(0, inplace=True)"
+    },
+    {
+        "Input": "Write a python code to backfill missing values in the dataframe.",
+        "Output": "df.bfill(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to fill missing values by backward filling in the dataframe.",
+        "Output": "df.bfill(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to propagate non-null values backward in the dataframe.",
+        "Output": "df.bfill(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to carry backward values in the dataframe.",
+        "Output": "df.bfill(inplace=True)"
+    },
+    {
+        "Input": "Write a python code to filter the dataframe for rows where 'age' is not null.",
+        "Output": "df = df[df['age'].notnull()]"
+    },
+    {
+        "Input": "Write a code in python to filter the dataframe to exclude rows with null 'age'.",
+        "Output": "df = df[df['age'].notnull()]"
+    },
+    {
+        "Input": "Provide a python code to select rows in the dataframe where 'age' is not null.",
+        "Output": "df = df[df['age'].notnull()]"
+    },
+    {
+        "Input": "Write a pandas code to filter rows in the dataframe where 'age' is not null.",
+        "Output": "df = df[df['age'].notnull()]"
+    },
+    {
+        "Input": "Show me how to filter dataframe for non-null 'age' values in python.",
+        "Output": "df = df[df['age'].notnull()]"
+    },
+    {
+        "Input": "What is the python code to select rows where 'age' column is not null?",
+        "Output": "df = df[df['age'].notnull()]"
+    },
+    {
+        "Input": "How can I filter the dataframe for rows where 'age' is not null in pandas?",
+        "Output": "df = df[df['age'].notnull()]"
+    },
+    {
+        "Input": "Write a code snippet in python to filter out rows where 'age' is not null.",
+        "Output": "df = df[df['age'].notnull()]"
+    },
+    {
+        "Input": "Give me a code to filter dataframe rows where 'age' column is not null.",
+        "Output": "df = df[df['age'].notnull()]"
+    },
+    {
+        "Input": "What code would you use to select rows where 'age' is not null in pandas?",
+        "Output": "df = df[df['age'].notnull()]"
+    },
+    {
+        "Input": "Write a python code to count the number of non-NA/null values in each column.",
+        "Output": "df.count()"
+    },
+    {
+        "Input": "How do you count non-null values in each column of a dataframe using python?",
+        "Output": "df.count()"
+    },
+    {
+        "Input": "Provide a code to calculate the number of non-missing values in each column.",
+        "Output": "df.count()"
+    },
+    {
+        "Input": "Write a code snippet to count non-null values in every column of a dataframe.",
+        "Output": "df.count()"
+    },
+    {
+        "Input": "Show me how to count non-NA/null values in each column using pandas.",
+        "Output": "df.count()"
+    },
+    {
+        "Input": "What is the python code to count non-NA values in each column of a dataframe?",
+        "Output": "df.count()"
+    },
+    {
+        "Input": "How can I calculate the number of non-null values in each column in pandas?",
+        "Output": "df.count()"
+    },
+    {
+        "Input": "Write a pandas code to count the number of non-missing values in each column.",
+        "Output": "df.count()"
+    },
+    {
+        "Input": "Give me a code to count non-null values in each column of a dataframe in python.",
+        "Output": "df.count()"
+    },
+    {
+        "Input": "What code would you use to count non-NA values in each column in pandas?",
+        "Output": "df.count()"
+    }
+]
