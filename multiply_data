@@ -1,0 +1,48 @@
+import json
+import random
+
+
+
+# Column names to be used for variations
+column_names = [
+    "age", "height", "weight", "salary", "score", "price", "quantity", "country", "city", "marks",
+    "id", "status", "temperature", "emp_id", "email_id", "address", "state", "zip_code",
+    "timestamp", "product_id", "user_id", "date_of_birth", "revenue", "expense", "income", 
+    "profit", "budget", "rating", "feedback", "transaction_id", "event_name", "event_date", 
+    "latitude", "longitude", "location", "patient_id", "diagnosis", "treatment", "medication", 
+    "appointment_date", "log_id", "log_level", "message", "user_agent", "notes", "description", 
+    "details", "remarks", "metadata", "order_id", "customer_id", "invoice_number", "shipment_date",
+    "batch_number", "license_plate", "passport_number", "phone_number", "email_address", "domain", 
+    "website", "postcode", "ip_address", "mac_address", "department", "job_title", "contract_id", 
+    "purchase_order", "inventory_id", "warehouse_location", "vendor_id", "supplier_id", "manufacturer", 
+    "sku", "model_number", "serial_number", "discount", "coupon_code", "voucher_number", "promotion", 
+    "campaign", "ad_id", "referral_code", "affiliate_id", "part_number", "component_id", "assembly_id", 
+    "machine_id", "tool_id", "sensor_id", "reading", "measurement", "analysis", "summary", "report_id", 
+    "chart_number", "patient_record", "medical_history", "allergy", "symptom"
+]
+
+
+def generate_variations(base_data, column_names, num_variations=30000):
+    variations = []
+    for _ in range(num_variations // len(base_data)):
+        for item in base_data:
+            for column in column_names:
+                new_item = {
+                    "Input": item["Input"].replace("gender", column).replace("marks", column).replace("age", column).replace("height", column).replace("score", column).replace("city", column).replace("sales", column).replace("category", column).replace("price", column).replace("country", column),
+                    "Output": item["Output"].replace("gender", column).replace("marks", column).replace("age", column).replace("height", column).replace("score", column).replace("city", column).replace("sales", column).replace("category", column).replace("price", column).replace("country", column)
+                }
+                variations.append(new_item)
+        #         if len(variations) >= num_variations:
+        #             break
+        #     if len(variations) >= num_variations:
+        #         break
+        # if len(variations) >= num_variations:
+        #     break
+    return variations
+
+# Generate the variations
+data = generate_variations(base_data, column_names, num_variations=30000)
+
+# Save to JSON file
+with open("pandas_dataset.json", "w") as file:
+    json.dump(data, file, indent=4)
